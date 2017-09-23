@@ -1,0 +1,14 @@
+<input type="hidden" class="upLoadType" value="one">
+<!--单张图片上传-->
+<div class="uoload_one dn">
+    <div class="webuploader-one uppic">上传单张图片</div>
+    <notempty name="picurl">
+        <img class="imgshow  uppic" src="{$picurl}">
+        <input type="hidden" name="picurl" value="{$picurl}"  class="picurl">
+        <else />
+        <input type="hidden" name="picurl" class="picurl"/>
+        <img class="imgshow dn uppic" src="">
+    </notempty>
+</div> 
+
+

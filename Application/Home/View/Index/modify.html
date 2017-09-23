@@ -1,0 +1,201 @@
+<extend name="Base:base" />
+<block name="head">
+    <link rel="stylesheet" href="/Public/Home/css/create.css">
+    <link rel="stylesheet" href="/Public/Static/tag/jquery.tag-editor.css">
+    <link href="/Public/Static/Cropper/css/cropper.css" rel="stylesheet">
+    <link href="/Public/Static/Cropper/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Public/Static/Cropper/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Static/Cropper/css/diyUpload.css">
+    <script>
+        var up_pic_url_one = "{:U('Image/upPicOne')}";
+        var up_pic_url_more = "{:U('Image/upPicMore')}";
+        var imgcrop_url = "{:U('Image/imgcrop')}";
+        var imgdel_url = "{:U('Image/delimg')}";
+    </script>
+</block>
+<block name="content">
+    <div class="loopTitle">修改loop</div>
+    <form class="form" enctype=”multipart/form-data” method="post" style="height: 80%;">
+        <input name='loopid' value="{$loop['loopid']}" type='hidden'>
+        <div class="content">
+            <div class="back"><a href="/show/{$loop['loopid']}">返回loop详情&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+            <div class="formDiv">
+                <div class='col-sm-3 formTitle'>
+                    loop名称
+                </div>
+                <div class='col-sm-6'>
+                    <input name="name" type="text" value="{$loop['looptitle']}" placeholder="请输入loop名称" style="width: 100%" />
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="formDiv">
+                <div class='col-sm-3 formTitle'>
+                    标签
+                </div>
+                <div class='col-sm-6' style="margin:0 0 1.2em">
+                    <textarea id="tag" ></textarea>
+                    <span class="tagTips"><a class="moreTag">更多标签</a><span>*按"回车"建立标签,标签最多10个。</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="formDiv" >
+                <div class='col-sm-3 formTitle'>
+                    loop封面
+                </div>
+                <div class='col-sm-9' >
+                    <div class="smallDiv" style="float: left">
+                        <div class="mask uppic small">上传图片</div>
+                        <img src="{$loop['loopcover']}" style="width: 100%;height: 100%;" >
+                        <input name="small_img" class="upload_input" value="" type="hidden">
+                    </div>
+                    <div class="bigDiv" style="float: left">
+                        <div class="mask uppic big">上传图片</div>
+                        <img src="{$loop['loopcover2']}" style="width: 100%;height: 100%;" >
+                        <input name="big_img" class="upload_input" value="" type="hidden">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="tagsDiv">
+                <div class="tagTitle">
+                    选择标签
+                    <a class="closeBtn"><img src="/Public/Home/images/close.png" ></a>
+                </div>
+                <div class="tagContent">
+                    <p>选择合适的标签,最多可选10个</p>
+                    <div class="tagSection">
+                        <div class="tagImage status"></div>
+                        <div class="tagList">
+                            <foreach name="tags[0]['tags']" item='tag'>
+                                <span class="flag">{$tag['diyflag_name']}</span>
+                            </foreach>
+                        </div>
+                    </div>
+                    <div class="tagSection ">
+                        <div class="tagImage sence"></div>
+                        <div class="tagList">
+                            <foreach name="tags[1]['tags']" item='tag'>
+                                <span class="flag">{$tag['diyflag_name']}</span>
+                            </foreach>
+                        </div>
+                    </div>
+                    <div class="tagSection ">
+                        <div class="tagImage style"></div>
+                        <div class="tagList">
+                            <foreach name="tags[2]['tags']" item='tag'>
+                                <span class="flag">{$tag['diyflag_name']}</span>
+                            </foreach>
+                        </div>
+                    </div>
+                </div>
+                <div class="tagFooter">
+                    <a class="btn btn-default confirm">确定</a>
+                </div>
+            </div>
+            <a class="next">完成</a>
+        </div>
+        <include file="Home@Image:imageFoot" />
+    </form>
+
+</block>
+<block name="script">
+    <script src="/Public/Static/Cropper/js/cropper.js"></script>
+    <script src="/Public/Static/Cropper/js/main.js"></script>
+    <script src = "/Public/Static/Cropper/js/ajaxfileupload.js" type = "text/javascript" ></script>
+    <script type="text/javascript" src="/Public/Static/Cropper/js/webuploader.html5only.min.js"></script>
+    <script type="text/javascript" src="/Public/Static/Cropper/js/diyUpload.js"></script>
+    <script type="text/javascript" src="/Public/Static/Cropper/js/common.js"></script>
+    <script src="/Public/Static/tag/jquery.tag-editor.js"></script>
+    <script src="/Public/Home/js/function.js"></script>
+    <script>
+        $(function () {
+            if(jsonUserInfo == true){
+                $(".touxiang").css("display","none");
+                $(".information .backOperate").css("display","none");
+            }
+
+            var tags = {$own_tags};
+            $("#tag").tagEditor({initialTags: tags});
+            $(".smallDiv,.bigDiv").hover(function () {
+                $(this).find(".mask").fadeIn();
+            }, function () {
+                $(this).find(".mask").fadeOut();
+            })
+            $(".small").click(function () {
+                setImageCropper("all", 400, 400, 'loop');
+            });
+            $(".big").click(function () {
+                setImageCropper("all", 382, 476, 'loop');
+            });
+
+//            $("#tag").tagEditor({placeholder: '输入或选择标签'});
+            
+            // 显示/关闭tag层
+            $(".moreTag").click(function () {
+                $(".tagsDiv").show();
+            });
+            $(".closeBtn").click(function () {
+                $(".tagsDiv").hide();
+            })
+
+            // 选择tag
+            $(".flag").click(function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                } else {
+                    var activeNum = $(".tagContent").find(".active").length;
+                    if (activeNum>= 10) {
+                        return false;
+                    } else {
+                        $(this).addClass("active");
+                    }
+                }
+            });
+            
+            // 点击确定选中tag
+            $(".confirm").click(function(){
+                $(".tagContent .active").each(function(){
+                    if($(".tag-editor-tag").length>10){
+                        return false;
+                    }
+                    $("#tag").tagEditor('addTag',$(this).html());
+                    $(".tagsDiv").hide();
+                })
+            })
+            
+            // 检查信息并创建loop
+            $(".next").click(function(){
+                var data = {};
+                data['name'] = $("input[name='name']").val();
+                data['tags'] = $("#tag").val();
+                data['small_img'] = $("input[name='small_img']").val();
+                data['big_img'] = $("input[name='big_img']").val();
+                data['loopid'] = $("input[name='loopid']").val();
+                if(!data['name']){
+                    layer.msg('请输入loop名称');
+                }else if(!data['tags']){
+                    layer.msg('请选择loop标签');
+                }else{
+                    var index = layer.load(1, {
+                        shade: [0.1,'#fff'] //0.1透明度的白色背景
+                    });
+                    $.ajax({
+                        type:"post",
+                        url:"/Home/Index/modify/{$loop['loopid']}",
+                        data:data,
+                        success:function(res){
+                            layer.close(index);
+                            if(res.status==0){
+                                layer.msg("loop修改成功")
+                                location.href="/show/{$loop['loopid']}"
+                            }else{
+                                layer.msg("loop创建失败");
+                            }
+                        }
+                    });
+                }
+            })
+        })
+    </script>
+</block>

@@ -1,0 +1,714 @@
+<extend name="Base:base" />
+<block name="head">
+    <link rel="stylesheet" href="/Public/Home/css/show.css">
+    <meta charset="UTF-8">
+</block>
+<block name="content">
+    <div class="loopTitle">loop详情</div>
+    <div class="content">
+        <div class="back"><a href="/">返回loop列表&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+        <div class='baseInfo'>
+            <div class='cover'><img src="{$loop['loopcover']}" alt=''></div>
+            <div class="info">
+                <div class="loopName"><span>{$loop['looptitle']}</span><a href="/modify/{$loop['loopid']}"><img src="/Public/Home/images/edit.png" alt="编辑"></a></div>
+                <div class="clear"></div>
+                <div class="songNum">曲目:<span class="songNumber">{$musicNum}</span></div>
+                <div class="tagSection">标签:
+                    <div class="tags">
+                        <foreach name="tags" item="tag">
+                            <span>{$tag}</span>
+                        </foreach>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="songTitle"><span class="songTitleSpan">歌曲列表(<span class="songNumber">{$musicNum}</span>)</span><a class="addSong">+&nbsp;添加歌曲</a><div class="clear"></div></div>
+        <div class="songList dd">
+            <ol class="dd-list">
+                <foreach name="musics" item="music" key="k">
+                    <li class="dd-item" fileid="{$music.fileid}">
+                        <span class="num">{$k+1}</span>
+                        <span class="coverSpan">
+                            
+                            <img class='musicCover' src="{$music.music_cover}">
+                            <span class="musicMask">
+                                <a href="javascript:;" class="playBtn" path="{$music.path}">
+                                <img src="/Public/Home/images/play.png">
+                                </a>
+                            </span>
+                        </span>
+                        <span class="musicInfo">
+                            <span class='musicTitle'>{$music.filename}</span>
+                            <span class="musicArtist">{$music.artist}</span>
+                            <a class="collectBtn" <if condition="($music['islike']==0)">islike='0'<else />islike='1'</if> fileid="{$music.fileid}"><if condition="($music['islike']==0)"><img src="/Public/Home/images/collect.png"><else /><img src="/Public/Home/images/collected.png"></if></a>
+                            <a class="deleteBtn" fileid="{$music.fileid}"><img src="/Public/Home/images/delete.png"></a>
+                        </span>
+                    </li>
+                </foreach>
+            </ol>
+        </div>
+        <a class="bottomAddSong">+&nbsp;添加歌曲</a>
+        <div class="addSongSection">
+            <div class="songTitle">
+                添加歌曲
+                <a class="closeBtn"><img src="/Public/Home/images/close.png" ></a>
+            </div>
+            <div class="songContent">
+                <div class="songTab">
+                    <span class="active">电脑上传</span>
+                    <span>loop曲库</span>
+                    <span>我的收藏</span>
+                    <span>搜索</span>
+                </div>
+                <div class="songDiv local" >
+                    <form enctype=”multipart/form-data” method="post" action="http://api2.innfinityar.com/web/uploadMusic" >
+                        <a class="uploadMusic" ><img src="/Public/Home/images/upload_music.png"></a>
+                        <input name="music[]" type="file" id="localUpload" multiple accept="audio/mpeg" style="display: none">
+                        <input name="loopId" type="hidden" value="{$id}">
+                        <input name="userId" type="hidden" value="{:session('user_id')}">
+                        <ul>
+                        </ul>
+                    </form>
+                </div>
+                <div class="songDiv library" style="display: none">
+                    <div class="searchDiv" >
+                        <span class="searchSpan">
+                            <input name="search" class="searchInput" type="text" placeholder="搜索歌手">
+                            <a class="back" style="display: none"><img src="/Public/Home/images/close_input.png"></a>
+                        </span>
+                        <a class="searchBtn">搜索</a>
+                    </div>
+                    <div class="artistDiv" >
+                        <foreach name="artists" key="key" item="artistList">
+                            <div class="artistList">
+                                <a name="{$key}"></a>
+                                <div class="listTitle">{$key}</div>
+                                <ul>
+                                    <foreach name="artistList" item="artist">
+                                        <li><span class="headImg"><img src="{$artist.artistheaderimageurl}"></span>{$artist.artist}</li>
+                                    </foreach>
+                                    
+                                </ul>
+                            </div>
+                        </foreach>
+                        <div class="artistList" style="display: none">
+                            <div class="listTitle">搜索结果</div>
+                            <ul>
+                            </ul>
+                        </div>
+                        <ul class="letter">
+                            <foreach name="artists" key="key" item="artistList">
+                                <li><a href="#{$key}" style="color: #fff;text-decoration: none">{$key}</a></li>
+                            </foreach>
+                        </ul>
+                    </div>
+                    <div class="musicResult" style="display: none">
+                    </div>
+                </div>
+                <div class="songDiv favorite" style="display: none">
+                    <ul>
+                        <foreach name="collects" item="collect">
+                        <li class="music" >
+                            <i fileid="{$collect.id}" class="songI {$collect['isSelect']==0?'select':'selected'}"></i>
+                            <img src="{$collect.music_cover}">
+                            <div class="musicInfo">
+                                <div class="musicTitle">{$collect.filename}</div>
+                                <div class="musicArtist">{$collect.artist}</div>
+                            </div>
+                            <div class="clear"></div>
+                        </li>
+                        </foreach>
+                    </ul>
+                </div>
+                <div class="songDiv find" style="display: none">
+                    <div class="searchDiv" >
+                        <span class="searchSpan">
+                            <input name="search" class="searchInput" type="text" placeholder="搜索歌曲/专辑">
+                            <a class="back" style="display: none"><img src="/Public/Home/images/close_input.png"></a>
+                        </span>
+                        <a class="searchBtn">搜索</a>
+                    </div>
+                    <div class="searchTab" style="display: none">
+                        <span class="active">歌曲</span>
+                        <span>专辑</span>
+                    </div>
+                    <div class='iconTab' style="display: none">
+                        <span class='active'>·</span>
+                        <span>·</span>
+                    </div>
+                    <div class="findSong findDiv" style='display: none'>
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="findAlbum findDiv" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="songFooter" style="display: none;" >
+                <a class="checkAll">全选</a>
+                <a class="addBtn">添加至loop</a>
+            </div>
+        </div>
+    </div>
+    <audio id="audio" >你的浏览器不支持audio标签。</audio> 
+</block>
+
+<block name="script">
+    <script src="/Public/Home/js/function.js"></script>
+    <script src = "/Public/Static/Cropper/js/ajaxfileupload.js" type = "text/javascript" ></script>
+    <script src = "/Public/Home/js/drag.js" type = "text/javascript" ></script>
+    <script>
+        $(function(){
+
+            if(jsonUserInfo == true){
+                $(".touxiang").css("display","none");
+                $(".information .backOperate").css("display","none");
+            }
+
+            fileIds = [];
+            
+            $(".songList ol li").arrangeable();
+            
+            loopid = "{$id}";
+            $(document).on("mouseover",".songList li",function(){
+                $(this).find(".musicInfo .musicTitle").css("color","#59c4bd");
+                $(this).find(".deleteBtn").show();
+                $(this).find(".musicMask").show();
+            })
+            $(document).on("mouseout",".songList li",function(){
+                $(this).find(".musicInfo .musicTitle").css("color","#fff");
+                $(this).find(".deleteBtn").hide();
+                $(this).find(".musicMask").hide();
+            })
+            $(document).on("click",".deleteBtn",function(){
+                var data = {};
+                data['userId'] = $("input[name='userId']").val();
+                data['fileId'] = $(this).attr("fileid");
+                data['loopId'] = loopid;
+                data['isAdd'] = 0;
+                var $this = $(this);
+                layer.confirm("您确定要删除这首音乐吗?",{btn:["确认","取消"]},function(){
+                    layer.closeAll();
+                    $.ajax({
+                        type:"POST",
+                        url:"http://api2.innfinityar.com/web/addMusicToLoop",
+                        data:data,
+                        success:function(res){
+                            if(res.status==0){
+                                layer.msg("删除成功");
+                                setTimeout(function(){
+                                    location.reload();
+                                },1500)
+                            }
+                        }
+                    });
+                });
+            })
+            
+            // 收藏、取消收藏
+            $(document).on('click','.collectBtn',function(){
+                var islike = $(this).attr("islike");
+                var data = {};
+                var userId = data['userId'] = $("input[name='userId']").val();
+                data['fileId'] = $(this).attr("fileid"); 
+                if(islike==1){
+                    $(this).find("img").attr("src","/Public/Home/images/collect.png");
+                    $(this).attr("islike",0);
+                    data['like'] = 0;
+                }else{
+                    $(this).find("img").attr('src',"/Public/Home/images/collected.png");
+                    $(this).attr("islike",1);
+                    data['like'] = 1;
+                }
+                
+                $.ajax({
+                    type:"post",
+                    url:"http://api2.innfinityar.com/web/addToFavorite",
+                    data:data,
+                    success:function(res){
+                        if(islike==1){
+                            layer.msg("已取消收藏");
+                        }else{
+                            layer.msg("歌曲收藏成功");
+                        }
+                        // 获取收藏音乐
+                        var newData = {};
+                        newData['userId'] = userId;
+                        newData['loopId'] = loopid;
+                        $.ajax({
+                            type:"post",
+                            url:"http://api2.innfinityar.com/web/getMyFavorite",
+                            data:newData,
+                            success:function(result){
+                                if(result.status==0){
+                                    $(".favorite ul").html("");
+                                    var html = "";
+                                    $.each(result.data,function(k,v){
+                                        html += "<li class='music'>";
+                                        html += "<i fileid='"+v.id+"' class='songI "+(v['isSelect']==0?'select':'selected')+"'></i>";
+                                        html += "<img src='"+v.music_cover+"'>";
+                                        html += "<div class='musicInfo'>";
+                                        html += "<div class='musicTitle'>"+v.filename+"</div>";
+                                        html += "<div class='musicArtist'>"+v.artist+"</div>";
+                                        html += "</div>";
+                                        html += "<div class='clear'></div>";
+                                        html += "</li>";
+                                    })
+                                    $(".favorite ul").append(html);
+                                }
+                            }
+                        });
+                    }
+                });
+            })
+            
+            // 显示、隐藏浮层
+            $(".addSong,.bottomAddSong").click(function(){
+                $(".addSongSection").show();
+            });
+            $(".closeBtn").click(function(){
+                $(".addSongSection").hide();
+                $(".uploadMusic").show();
+                $(".local ul").html("");
+            });
+            
+            // 切换tab
+            $(".songTab span").click(function(){
+                $(this).addClass("active").siblings("span").removeClass("active");
+                var index = $(this).index();
+                $(".songDiv").eq(index).show().siblings(".songDiv").hide();
+                if(index==2||index==3){
+                    $(".songFooter").show();
+                }else{
+                    $(".songFooter").hide();
+                    $(".artistDiv").show();
+                    $(".songFooter").hide();
+                    $(".back").hide();
+                }
+            })
+            
+            $(".searchTab span").click(function(){
+                $(this).addClass("active").siblings("span").removeClass("active");
+                var index = $(this).index();
+                $(".findDiv").eq(index).show().siblings(".findDiv").hide();
+                $(".iconTab span").eq(index).addClass("active").siblings("span").removeClass("active");
+            })
+            
+            // 选中、取消选中歌曲
+//            $(document).on("click",".music i",function(){
+//                if($(this).hasClass("select")){
+//                    $(this).addClass("selected").removeClass("select");
+//                }else{
+//                    $(this).addClass("select").removeClass("selected");
+//                }
+//            });
+            
+            // 上传音乐
+            $(".uploadMusic").click(function(){
+                $(this).next("input").click();
+                $(this).next("input").on('change', function() {  
+                    // 隐藏按钮
+                    $(".uploadMusic").hide();
+                    // 获取上传的文件,遍历展示在浮层中
+                    var files = document.getElementById("localUpload").files;
+                    debugger
+                    $.each(files,function(k,v){
+                        var num = k*1+1*1;
+                        var html = "";
+                        html += "<li>";
+                        html += "<span class='num'>"+num+"</span>";
+                        html += "<img class='musicCover' src='/Public/Home/images/music_default.png'>";
+                        html += "<span class='musicInfo'>";
+                        html += "<span class='musicTitle'>"+v.name+"</span>";
+                        html += "<span class='musicArtist'></span>";
+                        html += "</span>";
+                        html += "</li>";
+                        $(".local ul").append(html);
+                        // 上传文件
+                    })
+                    
+                    $.each(files,function(k,v){
+                        var i=0.2;
+                        setInterval(function(){
+                            i = i*1+0.2;
+                            if(i>=80){
+                                return ;
+                            }
+                            $(".local ul li").eq(k).css("background-size",""+i+"% 100%");
+                            
+                        },70);
+                        var formData = new FormData();
+                        formData.append("music", v);
+                        formData.append("loopId", loopid);
+                        formData.append("userId", $("input[name='userId']").val());
+
+                        var liIndex=k;
+                        debugger
+                        $.ajax({
+                            url:"http://api2.innfinityar.com/web/uploadMusic",
+                            type:"POST",
+                            data:formData,
+                            contentType: false,
+                            cache: false,
+                            dataType:'json',
+                            processData: false,
+                            async: true,
+                            success:function(res){
+                                console.log(res);
+                                if(res.status==0){
+                                    $(".local ul li").eq(liIndex).css("background-size","100%");
+                                    if(res.status==0&&res.isExist==0){
+                                        $(".local ul li").eq(liIndex).find(".musicCover").attr('src',res['data']['music_cover']);
+                                        $(".local ul li").eq(liIndex).find(".musicArtist").html(res['data']['artist']);
+                                        $(".local ul li").eq(liIndex).find(".musicTitle").html(res['data']['filename']);
+                                        $(".local ul li .musicInfo").append("<img class='tipIcon'  src='../../../../Public/Home/images/ok.png'>");
+                                        // 添加到歌曲列表
+                                        var html = "";
+                                        var num = $(".songList li").length+1;
+                                        html += "<li class='dd-item' fileid="+res.data.id+">";
+                                        html += "<span class='num'>"+num+"</span>";
+                                        html += "<span class='coverSpan'>";
+                                        html += "<img class='musicCover' src='"+res.data.music_cover+"'>";
+                                        html += "<span class='musicMask'>";
+                                        html += "<a href='javascript:;' class='playBtn' path='"+res.data.path+"'>";
+                                        html += "<img src='/Public/Home/images/play.png'>";
+                                        html += "</a>";
+                                        html += "</span>";
+                                        html += "</span>";
+                                        html += "<span class='musicInfo'>";
+                                        html += "<span class='musicTitle'>"+res.data.filename+"</span>";
+                                        html += "<span class='musicArtist'>"+res.data.artist+"</span>";
+                                        html += "<a class='collectBtn' islike='0' fileid='"+res.data.id+"'><img src='../../../../Public/Home/images/collect.png'></a>";
+                                        html += "<a class='deleteBtn' fileid='"+res.data.id+"'><img src='../../../../Public/Home/images/delete.png'></a>";
+                                        html += "</span>";
+                                        html += "</li>";
+                                        $(".songList ol").append(html);
+                                        var songNumber = $(".songList").find("li").length;
+                                        $(".songNumber").html(songNumber);
+                                    }else if(res.status==0&&res.isExist==1){
+                                        $(".local ul li .musicInfo").append("<img class='tipIcon'  src='../../../../Public/Home/images/no.png'>");
+                                        $(".local ul li").eq(liIndex).find(".musicArtist").html("该音乐已存在歌单");
+                                        $(".local ul li").eq(liIndex).find(".musicArtist").css("color","#ca446a");
+                                    }else{
+                                        $(".local ul li .musicInfo").append("<img class='tipIcon'  src='../../../../Public/Home/images/no.png'>");
+                                        $(".local ul li").eq(liIndex).find(".musicArtist").html("上传失败,请优先选择正版音频");
+                                        $(".local ul li").eq(liIndex).find(".musicArtist").css("color","#ca446a");
+                                    }
+                                    
+                                }
+                            }
+                        });
+                        setTimeout(function(){},3000);
+                    })
+                })
+            })
+            
+            
+            // 通过歌手获取音乐
+            $(document).on("click",".artistList li",function(){
+                var search = $(this).text();
+                $(".library .searchInput").val(search);
+                var artist = $(".searchInput").val();
+                $.ajax({
+                    type:"post",
+                    data:{'artist':artist,'loopId':loopid},
+                    url:"{:U('getMusicByArtistName')}",
+                    success:function(res){
+                        $(".artistDiv").hide();
+                        var html = "";
+                        if(res){
+                            $.each(res,function(k,v){
+                                html += "<div class='musicDiv'>";
+                                html += "<div class='album'>";
+                                html += "<i class='select  albumSelect'></i>";
+                                html += "<img src='"+v.cover+"'>";
+                                html += "<div class='albumInfo'>";
+                                html += "<div class='albumTitle'>"+v.album+"</div>";
+                                if(v.time!=null){
+                                    html += "<div class='albumTime'>"+v.time+"</div>";
+                                }
+                                html += "</div>";
+                                html += "</div>";
+                                html += "<div class='clear'></div>";
+                                html += "<ul class='songUl'>";
+                                $.each(v['musics'],function(key,music){
+                                    html += "<li><i class='songSelect songI "+((music['isSelect']==0&&!isSelect(music['id']))?'select':'selected')+"' fileid='"+music.id+"' ></i><span>"+music.filename+"</span></li>";
+                                })
+                                html += "</ul>";
+                                html += "</div>";
+                            })
+                            $(".songFooter").show();
+                        }
+                        
+                        $(".musicResult").html(html).show();
+                        $(".library .back").css("display","inline-block");
+                        
+                    }
+                });
+            });
+            
+            // 点击专辑全选下面的歌曲
+            $(document).on("click",".albumSelect",function(){
+                if($(this).hasClass('select')){
+                    $(this).addClass('selected').removeClass('select');
+                    $(this).parent(".album").siblings(".songUl").find("li i").addClass('selected').removeClass('select');
+                    $.each($(this).parent(".album").siblings(".songUl").find("li i"),function(k,v){
+                        var fileid = $(v).attr("fileid");
+                        if($.inArray(fileid, fileIds)=="-1"){
+                            fileIds.push(fileid);
+                        }
+                    })
+                }else{
+                    $(this).addClass('select').removeClass('selected');
+                    $(this).parent(".album").siblings(".songUl").find("li i").addClass('select').removeClass('selected');
+                    $.each($(this).parent(".album").siblings(".songUl").find("li i"),function(k,v){
+                        var fileid = $(v).attr("fileid");
+                        if($.inArray(fileid, fileIds)!="-1"){
+                            fileIds.splice($.inArray(fileid, fileIds));
+                        }
+                        
+                    })
+                }
+            })
+            // 单选某首歌
+            $(document).on("click",".songSelect",function(){
+                var fileid = $(this).attr("fileid");
+                if($(this).hasClass('select')){
+                    if($.inArray(fileid, fileIds)=="-1"){
+                        fileIds.push(fileid);
+                    }
+                    $(this).addClass('selected').removeClass('select');
+                }else{
+                    if($.inArray(fileid, fileIds)!="-1"){
+                        fileIds.splice($.inArray(fileid, fileIds));
+                    }
+                    $(this).addClass('select').removeClass('selected');
+                }
+                console.log(fileIds);
+                var total = $(this).parents('.songUl').find("li").length;
+                var selected = $(this).parents('.songUl').find(".selected").length;
+                if(total==selected){
+                    $(this).parents('.songUl').siblings('.album').find("i").addClass("selected").removeClass('select');
+                }else{
+                    $(this).parents('.songUl').siblings('.album').find("i").addClass("select").removeClass('selected');
+                }
+            })
+            // 搜索艺人
+            $(".library .searchBtn").click(function(){
+                var artist = $(this).siblings('.searchSpan').find("input").val();
+                console.log(artist);
+                if(artist){
+                    $.ajax({
+                        type:"post",
+                        data:{"artist":artist},
+                        url:"http://api2.innfinityar.com/web/searchArtist",
+                        success:function(res){
+                            if(res.status==0){
+                                var html = "";
+                                $.each(res.data,function(k,v){
+                                    html += "<li><span class='headImg'><img src='"+v.artistheaderimageurl+"'></span>"+v.artist+"</li>"
+                                })
+                                $(".artistList:last").find("ul").html(html);
+                                $(".artistDiv").show();
+                                $(".musicResult").hide();
+                                $(".artistList:last").show().siblings(".artistList").hide();
+                                $(".letter").hide();
+                                $(".library .back").css("display","inline-block");
+                            }
+                        }
+                    })
+                }
+                
+            });
+            
+            $(".library .back").click(function(){
+                $(".musicResult").hide();
+                $(".artistDiv").show();
+                $(".library .searchInput").val("");
+                $(".artistList:last").hide().siblings(".artistList").show();
+                $(".letter").show();
+                $(this).hide();
+                $(".songFooter").hide();
+            })
+            
+            // 搜索歌曲和专辑
+            $(".find .searchBtn").click(function(){
+                var name = $(this).siblings('.searchSpan').find("input").val();
+                if(name){
+                    var data = {};
+                    data['loopId'] = loopid;
+                    data['name'] = name;
+                    $.ajax({
+                        type:"post",
+                        data:data,
+                        url:"{:U('searchLoop')}",
+                        success:function(res){
+                            if(res.musics||res.albums){
+                                if(res.musics){
+                                    console.log(fileIds);
+                                    var music_html = "";
+                                    $.each(res.musics,function(k,music){
+                                        music_html += "<li class='music' >";
+                                        music_html += "<i fileid="+music.fileid+" class='songI songSelect "+((music['isSelect']==0&&!isSelect(music['fileid']))?"select":"selected")+"'></i>";
+                                        music_html += "<img src='"+music.music_cover+"'>";
+                                        music_html += "<div class='musicInfo'>";
+                                        music_html += "<div class='musicTitle'>"+music.filename+"</div>";
+                                        music_html += "<div class='musicArtist'>"+music.artist+"</div>";
+                                        music_html += "</div>";
+                                        music_html += "<div class='clear'></div>";
+                                        music_html += "</li>";
+                                    })
+                                    $(".findSong ul").html(music_html);
+                                }
+                                
+                                
+                                if(res.albums){
+                                    var html = "";
+                                    $.each(res.albums,function(k,v){
+                                        html += "<div class='musicDiv'>";
+                                        html += "<div class='album'>";
+                                        html += "<i class='select albumSelect'></i>";
+                                        html += "<img src='"+v.cover+"'>";
+                                        html += "<div class='albumInfo'>";
+                                        html += "<div class='albumTitle'>"+v.album+"</div>";
+                                        if(v.time!=null){
+                                            html += "<div class='albumTime'>"+v.time+"</div>";
+                                        }
+                                        html += "</div>";
+                                        html += "</div>";
+                                        html += "<div class='clear'></div>";
+                                        html += "<ul class='songUl'>";
+                                        $.each(v['musics'],function(key,music){
+                                            html += "<li><i class='songSelect songI "+((music['isSelect']==0&&!isSelect(music['fileid']))?"select":"selected")+"' fileid='"+music.fileid+"' ></i><span>"+music.filename+"</span></li>";
+                                        })
+                                        html += "</ul>";
+                                        html += "</div>";
+                                    })
+                                    $(".findAlbum").html(html);
+                                }
+                                
+                            }
+                            $(".searchTab").show();
+                            $(".iconTab").show();
+                            $(".findSong").show();
+                            $(".find .back").css("display","inline-block");
+                            $(".songFooter").show();
+                            $(".findAlbum").hide();
+                            $(".searchTab span").removeClass("active");
+                            $(".searchTab span:first").addClass("active");
+                            $(".iconTab span").removeClass("active");
+                            $(".iconTab span:first").addClass("active");
+                        }
+                    });
+                }
+                
+            });
+            
+            $(document).on("click",".find .back",function(){
+                $(".find .searchInput").val("");
+                $(".searchTab").hide();
+                $(".iconTab").hide();
+                $(".findSong").hide();
+                $(".findAlbum").hide();
+                $(".find .back").hide();
+                $(".songFooter").hide();
+            })
+            
+            // 添加至loop
+            $(".addBtn").click(function(){
+                var loadIndex = layer.load(1, {
+                    shade: [0.1,'#fff'] //0.1透明度的白色背景
+                });
+                var data = {};
+                data['userId'] = $("input[name='userId']").val();
+//                data['userId'] = '1'
+                data['loopId'] = loopid;
+                if(fileIds.length==0){
+                    layer.close(loadIndex);
+                    layer.msg("请选择要添加的歌曲");
+                }
+                data['fileIds'] = fileIds;
+//                data['isAdd'] = 1;
+
+
+                $.ajax({
+                    type:"post",
+                    data:data,
+                    url:"http://api2.innfinityar.com/web/addMusics",
+                    success:function(res){
+                        if(res.status==0){
+                            location.reload();
+                        }
+                    },
+                });
+                       
+            });
+            
+            // 全选
+            $(".checkAll").click(function(){
+                var index = $(".songTab").find(".active").index();
+                if(index==3){
+                    var Index = $(".find .searchTab").find('.active').index();
+                    $(".findDiv").eq(Index).find(".select").addClass("selected").removeClass("select");
+                    $.each($(".findDiv").eq(Index).find(".songSelect.selected"),function(k,v){
+                        var fileid = $(v).attr("fileid");
+                        if($.inArray(fileid, fileIds)=="-1"){
+                            fileIds.push(fileid);
+                        }
+                    })
+                }else{
+                    $(".songDiv .select").addClass("selected").removeClass("select");
+                    $.each($(".songDiv .songSelect.selected"),function(k,v){
+                        var fileid = $(v).attr("fileid");
+                        if($.inArray(fileid, fileIds)>"-1"){
+                            fileIds.push(fileid);
+                        }
+                    })
+                }
+            })
+            
+            old_path = "";
+            // 播放音频文件
+            var audio = document.getElementById("audio");
+            $(document).on("click",".playBtn",function(){
+                var path = $(this).attr("path");
+                
+                
+                if(path!=audio.src){
+                    if(audio.src='unknown'){
+                        $(this).find("img").attr('src',"/Public/Home/images/pause.png");
+                        audio.src = path;
+                        audio.play();
+                    }else{
+                        $(this).find("img").attr('src',"/Public/Home/images/pause.png")
+                        audio.src = path;
+                        audio.load();
+                    }
+                }else{
+                    if(audio.paused){
+                        $(this).find("img").attr('src',"/Public/Home/images/pause.png")
+                        audio.play();
+                    }else{
+                        audio.pause();
+                        $(this).find("img").attr('src',"/Public/Home/images/play.png")
+                    }
+                }
+            })
+            
+            audio.addEventListener('ended', function () {  
+                $(".playBtn img").attr('src','/Public/Home/images/play.png');
+            }, false);
+            
+            function isSelect(fileid){
+                var index = $.inArray(fileid,fileIds);
+                if(index>=0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            
+        })
+    </script>
+</block>

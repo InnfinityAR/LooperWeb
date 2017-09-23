@@ -1,0 +1,84 @@
+<extend name="Base:common" />
+<block name="head">
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/accountList.css">
+</block>
+<block name="content">
+    <div class="main width70">
+        <!--标题-->
+        <div class="loopTitle hostLoopTitle">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active firstLi">
+                    <a href="#hostListTab" aria-controls="hostListTab" role="tab" data-toggle="tab">
+                        <span>主办方列表</span>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#hostBrandListTab" aria-controls="hostBrandListTab" role="tab" data-toggle="tab">
+                        <span>主办方品牌列表</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="hostListTab">
+                <!--主题内容-->
+                <div class="listContent">
+                    <!--返回-->
+                    <div class="back clearfix">
+                        <div class="search" style="padding-left: 15px">
+                            <input type="text" placeholder="搜索活动">
+                            <span class="searchBtn">
+                        <img src="/Public/Home/images/search.png" alt="">
+                    </span>
+                        </div>
+                        <span class="lookAll">全部活动</span>
+                        <a href="/Home/Cooper/index" >返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    </div>
+                    <!--上传活动-->
+                    <div class="list clearfix">
+                        <ul class="hostList clearfix">
+                            <li class="col-sm-3 col-xs-3 col-md-3 col-lg-3 addImg">
+                                <a href="/Home/Cooper/createHost">
+                                    <img class="img-responsive" src="/Public/Home/images/addSqure.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--搜索结果-->
+                    <div class="searchlist clearfix">
+                        <ul class="rehostList clearfix">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="hostBrandListTab">
+                <!--主题内容-->
+                <div class="listContent">
+                    <!--返回-->
+                    <div class="back clearfix">
+                        <a href="/Home/Cooper/index" >返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    </div>
+                    <!--上传主办方-->
+                    <div class="list clearfix">
+                        <ul class="hostBrandList clearfix">
+                            <li class="col-sm-3 col-xs-3 col-md-3 col-lg-3 addImg">
+                                <a href="/Home/Cooper/hostBrand">
+                                    <img class="img-responsive" src="/Public/Home/images/addBrand.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brand">
+        <img src="/Public/Home/images/logo_word.png" alt="" />
+    </div>
+    <footer>
+        <p class="copyrights"> © LooperEDM 2017 沪ICP备16024766号</p>
+    </footer>
+</block>
+<block name="script">
+    <script src="/Public/Home/js/Cooper/hostList.js"></script>
+</block>

@@ -1,0 +1,309 @@
+<extend name="Base:common" />
+<block name="head">
+    <!--日期样式-->
+    <!--<link rel="stylesheet" href="/Public/Static/datatimepick/bootstrap-combined.min.css">-->
+    <link rel="stylesheet" href="/Public/Static/datatimepick/bootstrap-datetimepicker.min.css">
+    <!--上传海报-->
+    <link href="/Public/Static/Cropper/css/cropper.css" rel="stylesheet">
+    <link href="/Public/Static/Cropper/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Public/Static/Cropper/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Static/Cropper/css/diyUpload.css">
+    <!--下拉框-->
+    <link href="/Public/Static/bootstrap/css/select2.css" rel="stylesheet" />
+    <!--上传照片样式-->
+    <link href="/Public/Static/uploadImg/css/zyUpload.css" type="text/css" rel="stylesheet"/>
+    <!--本页面样式-->
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/createAct.css">
+    <link rel="stylesheet" href="/Public/Home/css/kuCity.css">
+    <script>
+        var up_pic_url_one = "{:U('Image/upPicOne')}";
+        var up_pic_url_more = "{:U('Image/upPicMore')}";
+        var imgcrop_url = "{:U('Image/imgcrop')}";
+        var imgdel_url = "{:U('Image/delimg')}";
+    </script>
+</block>
+<block name="content">
+    <div class="main width70">
+        <!--标题 创建liveshow-->
+        <div class="mainTitle">创建活动</div>
+        <!--主题内容-->
+        <div class="mainContent">
+            <div class="back">
+                <a  href="javascript:void(0);" onclick="javascript:history.go(-1);">返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+            </div>
+            <!--必填表单-->
+            <form class="form-horizontal" id="formInfo">
+                <!--活动名称-->
+                <div class="formDiv form-group">
+                    <label  class="col-sm-2 control-label">*&nbsp;&nbsp;活动名称</label>
+                    <div class="col-sm-7">
+                        <input  class="form-control" name="actName" type="text" id="userName"  placeholder="请输入活动名称">
+                    </div>
+                </div>
+                <!--活动日期-->
+                <div class="formDiv form-group">
+                    <label class="col-sm-2 control-label" >*&nbsp;&nbsp;活动日期</label>
+                    <div class="col-sm-7" >
+                        <div class=" date startD col-sm-5" style="padding-left: 0;padding-right: 0;">
+                            <input placeholder="请选择开始日期"  name="SDate"  class="form-control" id="SDate" size="12" type="text" value="" >
+                            <span class="close">
+                            <img src="/Public/Home/images/close.png"/>
+                            </span>
+                        </div>
+                        <div class="fgf col-sm-2">——</div>
+                        <div class=" date endD  col-sm-5"  style="padding-left: 0;padding-right: 0;">
+                            <input placeholder="请选择结束日期" class="form-control" id="EDate" size="12" type="text" value="" >
+                            <span class="close">
+                            <img src="/Public/Home/images/close.png"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--活动时间-->
+                <div class="formDiv form-group">
+                    <label class="col-sm-2 control-label" >活动时间</label>
+                    <div class="col-sm-7" >
+                        <div class=" date startT col-sm-5"  style="padding-left: 0;padding-right: 0;">
+                            <input placeholder="请选择开始时间"  name="SDate"  class="form-control" id="sTime" size="6" type="text" value="" >
+                            <span class="close">
+                            <img src="/Public/Home/images/close.png"/>
+                            </span>
+                        </div>
+                        <div class="fgf col-sm-2">——</div>
+                        <div class=" date endT  col-sm-5"  style="padding-left: 0;padding-right: 0;">
+                            <input placeholder="请选择结束时间" class="form-control" id="eTime" size="6" type="text" value="" >
+                            <span class="close">
+                            <img src="/Public/Home/images/close.png"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--地址-->
+                <div class="formDiv form-group">
+                    <label class="col-sm-2 control-label">*&nbsp;&nbsp;城市</label>
+                    <div class="col-sm-7">
+                        <input name="cityP"  class="form-control"  type="text" id="city" placeholder="请输入城市" required>
+                    </div>
+                </div>
+                <!--主办方-->
+                <div class="formDiv form-group" >
+                    <label class="col-sm-2 control-label">主办方</label>
+                    <div class="host  col-sm-7">
+                        <select  id="hostS" class="js-example-responsive" multiple >
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <!--场馆-->
+                <div class="formDiv form-group" >
+                    <label class="col-sm-2 control-label">*&nbsp;&nbsp;场馆</label>
+                    <div class="venue col-sm-7">
+                        <select name="venueS" id="venueS" class="js-example-responsive"  >
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <!--标签-->
+                <div class="formDiv form-group" >
+                    <label class="col-sm-2 control-label">*&nbsp;&nbsp;标签</label>
+                    <div class="tagS col-sm-7">
+                        <select name="tag" id="tag" class="js-example-responsive"  >
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <!--票价-->
+                <div class="formDiv form-group">
+                    <label class="col-sm-2 control-label">*&nbsp;&nbsp;票价</label>
+                    <div class="col-sm-2" style="padding-right: 0">
+                        <input type="text" name="money1" class="form-control money1">
+                    </div>
+                    <div class="fgf1 col-sm-1" >——</div>
+                    <div class="col-sm-2" style="padding-left: 0">
+                        <input type="text" name="money2" class="form-control money2">
+                    </div>
+                    <div class="col-sm-1 coinS" style="padding-left: 0">
+                        <select name="coin" id="coin" class="js-example-responsive"  >
+                            <option value="￥">￥</option>
+                            <option value="＄">＄</option>
+                            <option value="€">€</option>
+                            <option value="￡">￡</option>
+                        </select>
+                    </div>
+                </div>
+                <!--活动海报-->
+                <div class="formDiv form-group">
+                    <label class="col-sm-2 control-label"><span class="notWrite">*</span>&nbsp;&nbsp;活动海报</label>
+                    <div class="col-sm-7">
+                        <a class="upload uploadBtn">点击上传海报</a>
+                        <span class="tipshow">＊&nbsp;上传1080 X 1920px图片展示效果最佳！</span>
+                        <div class="clearfix">
+                            <!--只要传活动长图时用  后期不用可删掉-->
+                            <!--<div class="bill " data-toggle="modal" data-target="#avatar-modal">-->
+                                <!--<img  id="imgBill" src="/Public/Home/images/defaultImgH.png" style="width: 100%;height: 100%;"/>-->
+                                <!--<input name="small_img" class="upload_input" value="" type="hidden">-->
+                            <!--</div>-->
+                            <!--同时传活动长和方图  smallDiv：长图  bigDiv:方图-->
+                            <div class="smallDiv" >
+                                <img class="imgBill " src="/Public/Home/images/defaultImgH.png" style="width: 100%;height: 100%;" >
+                                <input name="small_img" class="upload_input" value="" type="hidden">
+                            </div>
+                            <div class="bigDiv" >
+                                <img class="imgBill" src="/Public/Home/images/defaultImg.png" style="width: 100%;height: 100%;" >
+                                <input name="big_img" class="upload_input" value="" type="hidden">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--参与艺人-->
+                <div class="formDiv form-group">
+                    <label  class="col-sm-2 control-label">参与艺人</label>
+                    <div class="actor col-sm-7">
+                        <select id="djS" class="js-example-responsive" multiple >
+                        </select>
+                    </div>
+                </div>
+                <!--RAVER FAMILY-->
+                <div class="formDiv form-group" >
+                    <label class="col-sm-2 control-label"  >RAVE FAMILY</label>
+                    <div class="family col-sm-7">
+                        <select id="familyS" class="js-example-responsive" multiple >
+                        </select>
+                    </div>
+                </div>
+                <!--活动详情-->
+                <div class="formDiv form-group">
+                    <label class="col-sm-2 control-label">活动详情</label>
+                    <div class="col-sm-7">
+                        <textarea name="h5" class="h5 form-control " type="text"  placeholder="可直接放入微信H5链接"></textarea>
+                    </div>
+                </div>
+                <!--购票链接-->
+                <div class="formDiv form-group">
+                    <label  class="col-sm-2 control-label" >购票链接</label>
+                    <div class="col-sm-7">
+                        <textarea name="ticket" class="ticket form-control" type="text" placeholder="可直接放入购票链接"></textarea>
+                    </div>
+                </div>
+                <!--选择厂牌-->
+                <div class="formDiv form-group cBrandCon">
+                    <label  class="col-sm-2 control-label" >选择厂牌</label>
+                    <div class="col-sm-7" style="margin-top: 8px">
+                        <div class="col-sm-8" style="padding-left: 0;padding-right: 0">
+                            <ul class="clearfix chooseBrand" >
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img style="width: 100%" src="/Public/Home/images/hostLogoEx.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--活动视频-->
+                <!--<div class="formDiv row">-->
+                <!--<label >活动视频</label>-->
+                <!--<div id="uploader-demo">-->
+                <!--&lt;!&ndash;用来存放item&ndash;&gt;-->
+                <!--<div id="thelist" class="uploader-list"></div>-->
+                <!--<div>-->
+                <!--<div id="filePicker" class="UploadV">点击上传视频</div>-->
+                <!--&lt;!&ndash;     <button id="ctlBtn" class="btn btn-default">开始上传</button>   &ndash;&gt;-->
+                <!--</div>-->
+                <!--<div id = "moreUpload" class="UploadV"  >-->
+                <!--<img src='/Public/Static/Cropper/images/upload.png'>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="clear"></div>-->
+                <!--</div>-->
+                <!--活动海报-->
+                <!--<div class="formDiv form-group">-->
+                    <!--<label class="col-sm-2 control-label" >更多海报</label>-->
+                    <!--<div class="col-sm-7">-->
+                        <!--<p style="color: #07ACA5;font-size: 12px;line-height: 35px">* 一次不能超过10张</p>-->
+                        <!--<div id="coverImages" class="coverImage"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <button  class="finish" type="button">完成</button>
+                <include file="Home@Image:imageFoot" />
+            </form>
+        </div>
+    </div>
+    <div class="brand">
+        <img src="/Public/Home/images/logo_word.png" alt="" />
+    </div>
+    <footer>
+        <p class="copyrights"> © LooperEDM 2017 沪ICP备16024766号</p>
+    </footer>
+</block>
+<block name="script">
+    <!--时间控件-->
+    <!--<script src="/Public/Static/datatimepick/datetimepicker.min.js"></script>-->
+    <script src="/Public/Static/datatimepick/bootstrap-datetimepicker.min.js"></script>
+    <script src="/Public/Static/datatimepick/bootstrap-datetimepicker.zh-CN.js"></script>
+    <!--上传海报-->
+    <script type="text/javascript" src="/Public/Static/Cropper/js/webuploader.html5only.min.js"></script>
+    <script src="/Public/Static/Cropper/js/cropper.js"></script>
+    <script src="/Public/Static/Cropper/js/main.js"></script>
+    <script src = "/Public/Static/Cropper/js/ajaxfileupload.js" type = "text/javascript" ></script>
+    <!--活动海报只传一张长图时引用-->
+    <!--<script type="text/javascript" src="/Public/Static/Cropper/js/common_3.js"></script>-->
+    <!--活动海报同时传一张方图 一张长途时引用-->
+    <script type="text/javascript" src="/Public/Static/Cropper/js/common.js"></script>
+    <!--上传视频 初始化webupload-->
+    <!--<script type="text/javascript" src="/Public/Static/Cropper/js/uploadVideo.js"></script>-->
+    <!--上传照片-->
+    <script src="/Public/Static/uploadImg/js/zyFile.js"></script>
+    <script src="/Public/Static/uploadImg/js/zyUpload.js"></script>
+    <script src="/Public/Static/uploadImg/js/jq22.js"></script>
+    <!--下拉框-->
+    <script src="/Public/Static/bootstrap/js/pingyin.js"></script>
+    <script src="/Public/Static/bootstrap/js/select2.js"></script>
+    <script src="/Public/Home/js/kuCity.js"></script>
+    <!--验证-->
+    <script src="/Public/Home/js/common/validator.js"></script>
+    <!--本页面js-->
+    <script src="/Public/Home/js/Cooper/createAct.js"></script>
+
+    <script>
+        $(function () {
+            $(".datetimepicker:eq(2),.datetimepicker:eq(3)").css({
+                "minWidth": 215
+            });
+            $(".datetimepicker:eq(2) thead,.datetimepicker:eq(3) thead").css({
+                "display": "none"
+            });
+            $(".datetimepicker:eq(2) table,.datetimepicker:eq(3) table").css({
+                "width": "100%"
+            });
+            $("#city").kuCity();
+//            初始化select2
+            $('#hostS').select2({
+//                placeholder: "搜索"
+                placeholder: "请选择主办方",
+                allowClear: true
+            });
+            $('#venueS').select2({
+                placeholder: "请选择场馆",
+                allowClear: true
+            });
+            $('#djS').select2({
+                placeholder: "搜索"
+            });
+            // 改变选中顺序
+            $("#djS").on("select2:select", function (evt) {
+                var element = evt.params.data.element;
+                var $element = $(element);
+                $element.detach();
+                $(this).append($element);
+                $(this).trigger("change");
+            });
+            $('#coin').select2({
+                minimumResultsForSearch: Infinity
+            });
+            $('#familyS').select2({
+                placeholder: "搜索"
+            });
+            $("th.prev span").removeClass("glyphicon-arrow-left").addClass("glyphicon-menu-left");
+            $("th.next span").removeClass("glyphicon-arrow-right").addClass("glyphicon-menu-right");
+        });
+    </script>
+</block>

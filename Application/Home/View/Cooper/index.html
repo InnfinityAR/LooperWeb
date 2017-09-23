@@ -1,0 +1,56 @@
+<extend name="Base:common" />
+<block name="head">
+    <title>LooperEDM</title>
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/index.css">
+</block>
+<block name="content">
+    <div class="main width70">
+        <!--以下内容正式上线删除-->
+        <div style="text-align: right;margin-bottom:20px;">
+            <button class="goBrand" type="button" style="background: #07ACA5;border: none;padding: 8px 20px;color: #fff;border-radius: 5px;">主办方品牌</button>
+        </div>
+        <!--以上内容正式上线删除-->
+
+        <ul class="coopType clearfix">
+            <!--创建活动-->
+            <li>
+                <div class="act">
+                    <img class="img-responsive" src="/Public/Home/images/act.png">
+                    <span>创建活动</span>
+                </div>
+            </li>
+            <!--创建场馆-->
+            <li >
+                <div class="venue">
+                    <img class="img-responsive" src="/Public/Home/images/venue.png">
+                    <span>创建场馆</span>
+                </div>
+            </li>
+            <!--创建主办方-->
+            <li>
+                <div  class="host">
+                    <img class="img-responsive" src="/Public/Home/images/brand.png">
+                    <span>创建主办方</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="brand">
+        <img src="/Public/Home/images/logo_word.png" alt="" />
+    </div>
+    <footer>
+        <p class="copyrights"> © LooperEDM 2017 沪ICP备16024766号</p>
+    </footer>
+</block>
+<block name="script">
+    <script src="/Public/Home/js/Cooper/index.js"></script>
+    <!--以下内容正式上线后删除-->
+    <script>
+        $(function () {
+           $(".goBrand").click(function () {
+               location.href = "/Home/Cooper/hostBrandList";
+           })
+        });
+    </script>
+    <!--以上内容正式上线后删除-->
+</block>

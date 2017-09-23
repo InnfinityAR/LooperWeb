@@ -1,0 +1,28 @@
+<!--多张图片上传-->
+<div id="upload_box" class="uoload_many dn">
+    <div id="test"></div>
+    <notempty name="pictures">
+        <div class="parentFileBox" style="min-width:1000px;">
+            <ul class="fileBoxUl">
+                <notempty name="pictures">
+                    <foreach name="pictures" item="picture">
+                        <li id="fileBox_before_{$key}" class="diyUploadHover">
+                            <div class="viewThumb">
+                                <img class="img-many imgMany_before_{$key}" src="{$picture['pic_url']}">
+                            </div>
+                            <div class="diyCancel" onclick="moreImgDel('before_{$key}')"></div> 
+                            <div class="diySuccess"></div> 
+                            <div class="cropper crop_before_{$key}" onclick="moreImgCrop('before_{$key}')">Cropper
+                                <input type="hidden" name="picurls[]" value="{$picture['pic_url']}" class="morepic picurl_before_{$key}">
+                            </div>
+                            <div class="sort-input" style="display: block;">&nbsp;sort&nbsp;
+                                <input type="text" value="{$picture['sort_id']}" placeholder="sort" name="sorts[]" />
+                            </div>
+                        </li>
+                    </foreach>
+                </notempty>
+            </ul>
+        </div>
+        <else />
+    </notempty>
+</div>

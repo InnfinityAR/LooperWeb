@@ -1,0 +1,91 @@
+<extend name="Base:common" />
+<block name="head">
+    <title>创建主办方品牌</title>
+    <!--页面样式-->
+    <link rel="stylesheet" href="/Public/Static/bootstrap/css/bootstrap-fileinput.css">
+    <link rel="stylesheet" href="/Public/Static/bootstrap/css/select2.css">
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/createAccount.css">
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/hostBrand.css">
+    <style>
+        .modal-backdrop{
+            display: none;
+        }
+        #userName,#intro{
+            color: #ccc ;
+        }
+    </style>
+</block>
+<block name="content">
+    <div class="main width70">
+        <!--标题 我的信息-->
+        <div class="loopTitle">基本信息填写</div>
+        <div class="content">
+            <!--返回-->
+            <div class="back"><a  href="javascript:void(0);" onclick="javascript:history.go(-1);">返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a></div>
+            <!--表单信息-->
+            <form id="formInfo" class="form form-horizontal" >
+                <!--用户名称-->
+                <div class="form-group formDiv ">
+                    <label  for="userName" class="col-xs-4 col-sm-2 col-md-2  control-label">*&nbsp;&nbsp;名称</label>
+                    <div class="col-xs-7 col-sm-8 col-md-8 ">
+                        <input name="userName" type="text" id="userName" class="form-control" placeholder="" >
+                    </div>
+                </div>
+                <!--主办方LOGO-->
+                <div class="form-group">
+                    <label class="col-xs-4 col-sm-2 col-md-2 control-label formTitle">*&nbsp;&nbsp;品牌logo</label>
+                    <div class="fileinput fileinput-new col-xs-8 col-sm-4 col-md-4 col-lg-4 hostLogo" data-provides="fileinput">
+                        <div class="btnDiv">
+                            <span class="btn clickBtn btn-file">
+                                <span class="fileinput-new">选择文件</span>
+                                <span class="fileinput-exists">重新上传</span>
+                                <input type="file" accept="image/x-png"/>
+                            </span>
+                        </div>
+                        <p class="tip">*&nbsp;请上传横版透明底PNG格式LOGO</p>
+                        <div class="fileinput-new thumbnail showBrand" style="width: 243px;height: 76px;max-height:76px;">
+                            <img id='picImg'  style="height: auto;max-height: 76px;" src="/Public/Home/images/looperLogo.png" alt="" />
+                        </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail uploadImgDiv" style="max-width: 243px; max-height: 76px;"></div>
+                    </div>
+                    <div class="col-xs-4  col-sm-2 col-md-4 col-lg-2 logoText">
+                        <span>LOGO示意</span>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+                        <img class="img-responsive" src="/Public/Home/images/hostLogoEx.png">
+                    </div>
+                </div>
+                <!--主办方-->
+                <div class="formDiv form-group" >
+                    <label class="col-sm-2 control-label">*&nbsp;所属主办方</label>
+                    <div class="host  col-sm-8">
+                        <select name="hostS" id="hostS" class="js-example-responsive" >
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <button  class="btn btn-block greenBtn submit" type="button">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+            </form>
+        </div>
+    </div>
+    <div class="brand">
+        <img src="/Public/Home/images/logo_word.png" alt="" />
+    </div>
+    <footer>
+        <p class="copyrights"> © LooperEDM 2017 沪ICP备16024766号</p>
+    </footer>
+</block>
+<block name="script">
+    <!--提示信息插件-->
+    <script src='/Public/Static/layer/layer_zh-cn.js'></script>
+    <!--上传主办方logo-->
+    <script src="/Public/Static/bootstrap/js/bootstrap-fileinput.js"></script>
+    <!--下拉框-->
+    <script src="/Public/Static/bootstrap/js/pingyin.js"></script>
+    <script src="/Public/Static/bootstrap/js/select2.js"></script>
+    <!--表单验证-->
+    <script src="/Public/Home/js/common/validator.js"></script>
+    <!--本页面js-->
+    <script src="/Public/Home/js/Cooper/hostBrand.js"></script>
+
+</block>

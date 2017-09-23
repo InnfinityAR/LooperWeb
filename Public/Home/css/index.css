@@ -1,0 +1,86 @@
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.main{
+    width: 60%;
+    margin: 0 auto;
+}
+.loopTitle{
+    background-color: rgba(52,49,74,0.66);
+    margin-top: 50px;
+    text-align: center;
+}
+.loopList{
+    background-color: rgba(52,49,74,0.66);
+    width: 100%;
+    min-height: 1000px;
+    margin: 20px 0 50px 0;
+}
+.loop{
+    width: 16.5%;
+    position: relative;
+    margin: 20px 4.2%;
+    float: left;
+    
+}
+.loop p{
+    height: 22px;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    margin-top: 10px;
+    text-align: left;
+}
+.loop span{
+    text-align: left;
+}
+.loop img{
+    width: 100%;
+}
+.create{
+    background-image: url(/Public/Home/images/create.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.create img{
+    margin-top: 15%;
+    width: 50%;
+}
+.deleteLoop{
+/*    display: none;*/
+    position: absolute;
+    right: -5px;
+    top:-9px;
+    
+}
+.deleteLoop img{
+    width: 20px;
+    height: 20px;
+}
+/**插件样式**/
+/*.grid{
+    position: relative;
+}
+.item{
+    display: block;
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    margin: 3% 4%;
+    z-index: 1;
+}
+.item.muuri-dragging,item.muuri-release{
+    z-index: 2;
+}
+.item.murri-hidden{
+    z-index: 0;
+}
+.item-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}*/
+

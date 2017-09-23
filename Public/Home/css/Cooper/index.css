@@ -1,0 +1,33 @@
+.coopType li{
+    float: left;
+    padding: 0;
+    width: 30%;
+    border: 1px solid transparent;
+    margin-right: 5%;
+    cursor: pointer;
+}
+.coopType li:last-child{
+    margin: 0;
+}
+.coopType li span {
+    display: block;
+    width: 100%;
+    background: #373D4D;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+.coopType li:hover {
+     border: 1px solid #07ACA5;
+}
+.coopType li:hover span{
+    background: #07ACA5;
+    color: #fff;
+}
+footer p{
+    text-align: center;
+    position: fixed;
+    left: 43%;
+    bottom: 20px
+}

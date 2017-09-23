@@ -1,0 +1,270 @@
+.main .loopTitle{
+    height: 50px;
+    color: #ccc;
+    line-height: 50px;
+    background: rgba(52,49,74,0.66);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+.listContent{
+    background: rgba(52,49,74,0.66);
+    min-height: 800px;
+}
+.list,.back,.searchlist{
+    width: 90%;
+    margin: 0 auto;
+}
+.lookAll{
+    float: left;
+    /*display: inline-block;*/
+    background-color: #07ACA5;
+    padding: 0 20px;
+    line-height: 31px;
+    margin-left: 14px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+}
+.back{
+    padding: 20px 20px 30px 0;
+}
+.back .search{
+    float: left;
+    position: relative;
+}
+.back > a{
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+}
+.addImg a{
+    display: block;
+}
+.back .search > input{
+    background: transparent;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 280px;
+    padding: 4px 35px 4px 10px;
+    font-size: 14px;
+}
+.back .search > .searchBtn{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    cursor: pointer;
+}
+.back .search > span > img{
+    width: 100%;
+}
+.hostList li{
+    margin-bottom: 40px;
+}
+.hostImg{
+    display: inline-block;
+}
+.addImg a img{
+    width: 100%;
+}
+.hostHead{
+    cursor: pointer;
+    position: relative;
+}
+.hostHead  img{
+    width:100%;
+}
+
+.hostHead > .edit{
+    position: absolute;
+    top: 35%;
+    left: 32%;
+    display: none;
+    width: 35%;
+}
+.actList li,.reActList li{
+    float: left;
+    width: 16%;
+    margin-right: 5%;
+    margin-bottom: 35px;
+}
+.actList li:nth-of-type(5n),
+.reActList li:nth-of-type(5n){
+    margin-right: 0;
+}
+.actHead{
+    position: relative;
+    cursor: pointer;
+}
+.actHead div{
+     width: 100%;
+     position: absolute;
+     top: 45%;
+     display: none;
+ }
+.actHead div .edit,.actHead div .delAct{
+    display: inline-block;
+    width: 30%;
+}
+.actHead div .edit{
+    margin-left: 15%;
+}
+.actHead div .delAct{
+    margin-left: 10%;
+}
+.actHead div .edit span,.actHead div .delAct span{
+    margin-left: 23%;
+}
+.actHead div .edit img,.actHead div .delAct img{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.addActImg img{
+    width: 100%;
+}
+.actImg img{
+    width: 100%;
+}
+.hostName{
+    margin-top: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.place{
+    position: absolute;
+    left: 0;
+    background: #07ACA5;
+    color: #fff;
+    padding: 5px 10px;
+    top: 5%;
+    max-width: 122px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.actName{
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+footer{
+    text-align: center;
+    margin: 20px 0;
+}
+.overAct{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    background: rgba(0,0,0,.95);
+    text-align: center;
+}
+.searchlist{
+    display: none;
+}
+/*hostList.html navTab*/
+.nav-tabs{
+    border-bottom: none;
+}
+.nav-tabs>li{
+    width: 49.5%;
+    cursor: pointer;
+}
+.firstLi{
+    margin-right: 1%;
+}
+.nav-tabs>li>a{
+    background: rgba(52,49,74,0.3);
+    border: none;
+    font-size: 14px;
+    margin-top: 5px;
+    border-radius: 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    border-radius: 0;
+    background: rgba(52,49,74,0.66);
+    border: none;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0;
+}
+.nav-tabs>li>a:hover{
+    background: rgba(52,49,74,0.66);
+}
+.nav-tabs>li>a>span{
+    padding: 0 15px 2px;
+}
+.nav-tabs>li.active>a>span{
+    border-bottom: 2px solid #f5e92a;
+}
+@media screen and (min-height:1000px ) {
+    .listContent{
+        min-height: 1500px;
+    }
+}
+/*hostList*/
+.main div.hostLoopTitle{
+    background-color: transparent;
+}
+/*hostBrandLisr*/
+#hostBrandListTab .hostHead{
+    border: 1px solid rgba(255,255,255,0.2);
+    min-height: 117px;
+    height: 60px;
+    text-align: center;
+}
+#hostBrandListTab .hostHead > .edit {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    display: none;
+    width: 20%;
+}
+#hostBrandListTab .hostImg{
+    height: 60px;
+    max-height: 60px;
+}
+#hostBrandListTab .hostHead img {
+    height: 100%;
+}
+#hostBrandListTab .hostImg .avatar{
+    height: 100%;
+    width: auto;
+}
+@media (min-width: 992px) {
+    #hostBrandListTab  .hostHead,#hostBrandListTab  .hostImg{
+        min-height: 42px;
+        height: 42px;
+    }
+}
+@media (min-width: 1200px) {
+    #hostBrandListTab .hostHead,#hostBrandListTab  .hostImg{
+        min-height: 60px
+    }
+}
+@media (min-width: 1600px){
+    #hostBrandListTab  .hostHead,#hostBrandListTab  .hostImg{
+        min-height: 70px
+    }
+}
+@media (min-width: 1900px){
+    #hostBrandListTab  .hostHead,#hostBrandListTab  .hostImg{
+        min-height: 86px
+    }
+}
+@media (min-width: 2560px){
+    #hostBrandListTab  .hostHead,#hostBrandListTab .hostImg{
+        min-height: 117px
+    }
+}

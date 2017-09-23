@@ -1,0 +1,52 @@
+.main{
+    background: rgba(52,49,74,0.66);
+    height:500px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.textContent{
+    width: 70%;
+    margin: 0 auto;
+    /*padding-top: 150px;*/
+}
+.textContent h4,.textContent > button{
+    color: #fff;
+}
+.textContent h4{
+    font-size: 20px;
+    font-weight: normal;
+}
+.tipText{
+    margin: 40px 0 0 0;
+}
+.tipText p{
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+}
+.goIndex{
+    margin-top: 40px;
+    width: 135px;
+    background: #07ACA5;
+    border: none;
+    line-height: 35px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    height: 35px;
+}
+footer{
+    text-align: center;
+    position: fixed;
+    left: 43%;
+    bottom: 20px
+ }
+@media screen and (max-height: 600px)  {
+    .main {
+        height: 380px;
+    }
+    .textContent{
+        padding-top: 95px!important;
+    }
+}

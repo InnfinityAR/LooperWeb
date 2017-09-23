@@ -1,0 +1,648 @@
+.loopTitle{
+    background-color: rgba(52,49,74,0.66);
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.content{
+    background-color: rgba(52,49,74,0.66);
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    margin-top: 20px;
+    min-height: 600px;
+    overflow-y: scroll;
+    text-align: center;
+    padding: 15px 20px;
+    position: absolute;
+    left: 20%;
+    z-index:99999;
+}
+.back{
+    text-align: right;
+}
+.back a{
+    text-decoration: none;
+    color:#fff;
+}
+.baseInfo{
+    margin:25px 10px;
+    display: block;
+    width: 100%;
+    
+}
+.baseInfo .cover{
+    float: left;
+    width: 25%;
+}
+.baseInfo .cover img{
+    width: 100%;
+}
+.baseInfo .info{
+    float: left;
+    display: block;
+    width: 60%;
+    margin-left: 8%;
+}
+.loopName span{
+    float: left;
+    font-size: 20px;
+}
+.loopName a{
+    float: right;
+}
+.loopName a img{
+    width: 70%;
+}
+.clear{
+        clear: both;
+}
+.songNum{
+    text-align: left;
+    margin-top: 30px;
+}
+.tagSection{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+/*.tagSection .tagLabel{
+    float: left;
+}*/
+.tags{
+    display: inline-block;
+    float: right;
+    width: 90%;
+}
+.tags span{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    background-color: #6e6c78;
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+.songTitle{
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+.songTitle .songTitleSpan{
+    float: left;
+    font-size: 16px;
+}
+.songTitle a{
+    float: right;
+    color:#fff;
+    text-decoration: none;
+}
+.songList{
+    display: block;
+    width: 100%;
+    height: 55%;
+    border-top: 1px solid #494554;
+    border-bottom: 1px solid #494554;
+    overflow-y: scroll;
+}
+.bottomAddSong{
+    color:#fff;
+    text-decoration: none;
+    margin-top: 15px;
+    display: block;
+}
+.bottomAddSong:hover{
+    text-decoration: none;
+    color:#fff;
+}
+.addSongSection{
+    display: none;
+    width: 40%;
+    height: 600px;
+    background-color: #151519;
+    color: #fff;
+    position: fixed;
+    top:12%;
+    margin: auto;
+    left: 30%;
+    z-index: 999;
+}
+.addSongSection .songTitle{
+    background-color: #433d53;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.closeBtn{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+.closeBtn img{
+    width: 100%;
+}
+.addSongSection .songContent{
+    display: block;
+    width:100%;
+    height: 545px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+}
+.songTab{
+    margin-bottom: 25px;
+}
+.songTab span{
+    color:#ccc;
+    margin: 0 13px 5px 13px; 
+    cursor: pointer;
+}
+.songTab span.active{
+    color:#fff;
+}
+.songDiv .uploadMusic{
+    display: block;
+    margin: auto;
+    margin-top: 25%;
+    width: 120px;
+}
+.songDiv .uploadMusic img{
+    width: 100%;
+}
+.favorite .music{
+    display: block;
+    width:90%;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+.favorite .music input{
+    float: left;
+    margin-top: 15px;
+}
+.favorite .music img{
+    width: 8%;
+    margin-left: 5%;
+    float: left;
+}
+.favorite .musicInfo{
+    float:left;
+    margin-left: 3%;
+}
+.select{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-image:url('/Public/Home/images/select.png'); 
+    background-size: 100%;
+    margin-top: 10px;
+}
+.selected{
+    float: left;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image:url('/Public/Home/images/selected.png'); 
+    background-size: 100%;
+}
+/*.songDiv .uploadMusic img{
+    width:120px;
+    height: 40px;
+}*/
+.local ul li{
+    display: block;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-bottom: 3px;
+    background-image: url('/Public/Home/images/progress.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+     
+}
+.local ul li .num{
+    margin-left: 5%;
+}
+.local ul li img{
+    width: 8%;
+    margin-left: 5%;
+}
+.local ul li .musicInfo{
+    margin-left: 2%;
+}
+.local ul li .musicInfo .musicTitle{
+    top: 0;
+    position: absolute;
+}
+.local ul li .musicInfo .musicArtist{
+    bottom: 0;
+    position: absolute;
+}
+.songList ol li{
+    display: block;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-bottom: 3px;
+    margin-top:15px;
+    
+}
+.songList ol li .deleteBtn{
+    display: none;
+    position: absolute;
+    right:0;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.songList ol li .deleteBtn img{
+    width: 60%;
+}
+.songList ol li .collectBtn{
+    position: absolute;
+    right:0;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 55px;
+}
+.songList ol li .collectBtn img{
+    width: 60%;
+}
+.songList ol li img{
+    width: 6%;
+    margin-left: 5%;
+}
+.songList ol li .musicInfo{
+    position: absolute;
+    width: 80%;
+    height: 50px;
+    margin-left: 20%;
+}
+.songList ol li .musicInfo .musicTitle{
+    top: 0;
+    position: absolute;
+}
+.songList ol li .musicInfo .musicArtist{
+    bottom: 0;
+    position: absolute;
+}
+.coverSpan{
+    display: inline-block;
+    height: 50px;
+}
+.songList .num{
+    position: absolute;
+    margin-top: 18px;
+}
+.songList .coverSpan .musicCover{
+    height: 50px;
+    width:50px;
+    position: absolute;
+}
+.musicMask{
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: 5%;
+    margin-top:0px;
+    background-color: rgba(6,172,164,0.6);
+}
+.musicMask a{
+    height: 50px;
+    width: 48px;
+    display: inline-block;
+}
+.songList .musicMask img{
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.library .searchInput{
+    background-image: url('/Public/Home/images/search.png');
+    background-position: 5% center;
+    background-repeat: no-repeat; 
+    background-size: 7%;
+    box-sizing: border-box;
+    font-size:14px;
+    height:32px;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    background-color: #2e333a;
+    color:#ccc;
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    display:inline-block;
+    outline:0;
+    padding-left: 2.8em;
+    text-decoration:none;
+    width:50%;
+    margin:auto;
+    border-left:0px;
+    border-top:0px;
+    border-right:0px;
+    border-bottom:0px 
+}
+/*.library .searchSpan{
+    position: absolute;
+}*/
+.library .back{
+    float: left;
+    margin-left:-6%; 
+    margin-top: 3px;
+    position: absolute;
+}
+.library .back img{
+    width: 20px;
+    margin-top: 2px;
+}
+.library .searchDiv{
+    vertical-align: top;
+    position: relative;
+}
+.library .searchBtn{
+    display: inline-block;
+    width: 50px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 5px;
+    color:#fff;
+    border:1px solid #fff;
+    margin-left: 25px;
+    text-decoration: none;
+}
+.library .artistDiv{
+    text-align: left;
+}
+.library .artistDiv .artistList{
+    width: 96%;
+    margin: auto;
+}
+.library .artistDiv .artistList ul{
+    border-top: 1px solid #232327;
+}
+.library .artistDiv .artistList ul li{
+    list-style: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+.library .artistDiv .artistList ul li:hover{
+    background-color: #1f1c25;
+    cursor: pointer;
+}
+
+.library .artistDiv .artistList .headImg img{
+    margin: 5px 25px;
+    border-radius: 30px;
+    height: 30px;
+    width:30px;
+}
+.library .artistDiv .listTitle{
+    margin-left: 10px;
+}
+.library .artistDiv .letter{
+    display: block;
+    position: absolute;
+    right: 30px;
+    top:80px;
+    list-style:none;
+    background-color: #433d53;
+    font-size: 8px;
+    z-index: 5;
+    border-radius: 5px;
+    width: 20px;
+    text-align: center;
+}
+.library .musicDiv,.find .musicDiv{
+    border-bottom: 2px solid #232327;
+    width: 90%;
+    margin: auto;
+}
+.library .album,.find .album{
+    display: block;
+    height: 45px;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+}
+.library .album .select{
+    float: left;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.find .album .select{
+    float: left;
+    margin-left: 28px;
+    margin-right: 23px;
+}
+.library .album .selected{
+    float: left;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.find .album .selected{
+    float: left;
+    margin-left: 28px;
+    margin-right: 23px;
+}
+.library .album img,.find .album img{
+    float: left;
+    margin-right: 15px;
+    height: 40px;
+    width:40px;
+}
+.library .album .albumInfo,.find .album .albumInfo{
+    height: 45px;
+    float: left;
+}
+.library .album .albumInfo .albumTitle,.find .album .albumInfo .albumTitle{
+    height: 22px;
+    width: 300px;
+}
+.library .album .albumInfo .albumTime,.find .album .albumInfo .albumTime{
+   
+    height: 22px;
+    width: 300px;
+    font-weight: 200;
+}
+.library .songUl,.find .songUl{
+    text-align: left;
+    list-style: none;
+    margin-bottom: 15px;
+}
+.library .songUl .select{
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.find .songUl .select{
+    margin-left: 28px;
+    margin-right: 23px;
+}
+.library .songUl .selected{
+    margin-left: 10px;
+    margin-right: 30px;
+}
+.find .songUl .selected{
+    margin-left: 28px;
+    margin-right: 23px;
+}
+.library .songUl li span,.find .songUl li span{
+    display: inline-block;
+    margin-top: 10px;
+}
+.find .searchInput{
+    background-image: url('/Public/Home/images/search.png');
+    background-position: 5% center;
+    background-repeat: no-repeat; 
+    background-size: 7%;
+    box-sizing: border-box;
+    font-size:14px;
+    height:35px;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    background-color: #2e333a;
+    color:#ccc;
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    display:inline-block;
+    outline:0;
+    padding:0 2.5em;
+    text-decoration:none;
+    width:50%;
+    margin:auto;
+    border-left:0px;
+    border-top:0px;
+    border-right:0px;
+    border-bottom:0px 
+}
+.find .back{
+    float: left;
+    margin-left:-5%; 
+    margin-top: 5px;
+    position: absolute;
+}
+.find .back img{
+    width: 20px;
+}
+.find .searchDiv{
+    vertical-align: top;
+    position: relative;
+}
+.find .searchBtn{
+    display: inline-block;
+    width: 50px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 5px;
+    color:#fff;
+    border:1px solid #fff;
+    margin-left: 25px;
+    text-decoration: none;
+}
+.find .searchTab{
+    display: block;
+    margin-top:20px;
+}
+.find .searchTab span{
+    display: inline-block;
+    margin:0 15px;
+    color:#ccc;
+    cursor: pointer;
+}
+.find .iconTab span{
+    
+    opacity: 0;
+    margin:0 28px;
+    color:#ccc;
+    cursor: pointer;
+}
+.find .iconTab span.active{
+    opacity: 1;
+}
+.find .searchTab span.active{
+    color:#fff;
+}
+.find .music{
+    display: block;
+    width:90%;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+.find .music input{
+    float: left;
+    margin-top: 15px;
+}
+.find .music img{
+    width: 8%;
+    margin-left: 5%;
+    float: left;
+}
+.find .musicInfo{
+    float:left;
+    margin-left: 3%;
+}
+.songFooter{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #101010;
+    position: absolute;
+    bottom: 0;
+}
+.addBtn{
+    text-decoration: none;
+    float: left;
+    margin-left: 35%;
+    margin-top: 5px;
+    display:inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    color:#000;
+    border:1px solid #fff;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.addBtn:hover{
+    color: #000;
+    text-decoration: none;
+}
+.checkAll{
+    text-decoration: none;
+    color:#fff;
+    float: left;
+    margin-left: 15px;
+    position: relative;
+}
+.checkAll:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.local .tipIcon{
+    float: right;
+    margin-right: 10px;
+    width: 25px;
+    margin-top: 10px;
+}

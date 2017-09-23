@@ -1,0 +1,500 @@
+body{
+    background-color: #182314;
+}
+.has-success .form-control:focus, .has-success .form-control{
+    border-color: #a0a0a0;
+}
+/*label.smallLabel{*/
+    /*display: none;*/
+/*}*/
+label.btn{
+    border-radius: 0;
+}
+.modal-backdrop{
+    display: none;
+}
+.mainTitle{
+    height: 50px;
+    color: #ccc;
+    line-height: 50px;
+    background: rgba(52,49,74,0.66);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+.mainContent{
+    background-color: rgba(52,49,74,0.66);
+    margin: 20px auto 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+.back{
+    width: 100%;
+    text-align: right;
+}
+.back a{
+    display: inline-block;
+    margin: 15px 20px 24px;
+}
+.mainContent > p{
+    color:  #07ACA5;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.formDiv{
+    /*border: 1px solid red;*/
+    /*overflow: hidden;*/
+    height: auto;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+.formDiv label,.formDiv input{
+    /*float: left;*/
+}
+.formDiv label{
+    color: #ccc;
+    font-weight: normal;
+    line-height: 35px;
+    /*margin-bottom: 0;*/
+    /*width: 15%;*/
+    /*text-align: right;*/
+    /*margin-right: 4%;*/
+}
+input.money{
+    /*width: 40%;*/
+}
+.formDiv input,.formDiv textarea{
+    box-sizing: border-box;
+    font-size:14px;
+    height:35px;
+    background: transparent;
+    color:#ccc;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    display:block;
+    padding:0 1em;
+    text-decoration:none;
+    border:1px solid #a0a0a0;
+    outline: 0;
+    line-height: 35px;
+}
+.formDiv textarea{
+    resize: none;
+    height: 170px;
+}
+.clear{
+    clear: both;
+}
+.tag-editor{
+    margin: 0;
+    /*width: 60%;*/
+    background: transparent;
+}
+#SDate,#EDate{
+    width: 100%;
+
+}
+.startD,.endD,
+.startT, .endT{
+    position: relative;
+}
+
+.startD > .close,.endD .close,
+.startT > .close,.endT .close{
+    position: absolute;
+    right: 10px;
+    display: block;
+    width: 7px;
+    top: 6px;
+    cursor: pointer;
+}
+.startD > span img,.endD span img,
+.startT > span img,.endT span img{
+    width: 100%;
+}
+.width60{
+    width: 60%;
+}
+.formDiv .width28{
+    width: 28%;
+}
+.fgf{
+    margin: 2% 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+.fgf1{
+    width: 40px;
+    margin: 1% 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.formDiv .date{
+    /*float: left;*/
+}
+#city{
+    /*width: 14%;*/
+}
+.formDiv .addr{
+    width: 6%;
+    margin-right: 2%;
+}
+#keyword{
+    width: 38%;
+}
+.uploadVideo{
+    width: 20%;
+    cursor: pointer;
+}
+.uploadBill{
+    width: 15%;
+    cursor: pointer;
+}
+.upload{
+    display: inline-block;
+    width: 25%;
+    line-height: 35px;
+    color: #ccc;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.bill,.smallDiv{
+    margin-top: 10px;
+    width: 169px;
+    height: 300px;
+    float: left;
+    display: block;
+    /*margin-left: 19%;*/
+}
+.billSqure,.bigDiv{
+    width: 169px;
+    height: 169px;
+}
+.bigDiv {
+    margin-top: 10px;
+    margin-left: 50px;
+    float: left;
+    display: block;
+}
+.tipshow{
+    color: #07ACA5;
+}
+.billDiv{
+    width: 170px;
+    height: 220px;
+    margin-left: 19%;
+    margin-top: 2%;
+}
+input.h5{
+    margin: 0;
+}
+/*参与艺人family star*/
+.search
+{
+    left: 0;
+    position: relative;
+    /*float: left;*/
+}
+.addName{
+    display: inline-block;
+    color: #fff;
+    padding: 8px 2%;
+    vertical-align: middle;
+    float: left;
+    background: #07ACA5;
+    margin: 0 1% 2% 0;
+}
+.deleteName{
+    padding: 0 0 0 10px;
+    cursor: pointer;
+}
+.actor,.family,.host{
+    /*margin-left: 19%;*/
+}
+.search > a,.hostDiv > a{
+    display: inline-block;
+    background: #07aca5;
+    color: #fff;
+    line-height: 35px;
+    padding: 0 20px;
+    margin-left: 10px;
+}
+/*参与艺人family end*/
+#uploader-demo{
+    margin-left: 19%;
+}
+#uploader-demo .thumbnail{
+    border: none;
+}
+.webuploader-pick{
+    background: transparent;
+    color:#ccc;
+}
+#filePicker{
+    border: 1px solid #ccc;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 16px;
+}
+#moreUpload .webuploader-pick{
+    padding: 0;
+    width: 25%;
+}
+#moreUpload .webuploader-pick img{
+    width: 100%;
+}
+.videoDiv{
+    /*border:1px solid yellow;*/
+    overflow: hidden;
+    background: transparent;
+}
+.videoDiv > .trash{
+    margin: 2% 0 0 0;
+    padding-left: 1%;
+    cursor: pointer;
+}
+.videoIcon{
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+.videoIcon span{
+    position: absolute;
+    top: 22%;
+    left: 38%;
+    color: #f1f1f1;
+    font-size: 18px;
+}
+.infoDiv{
+    float: left;
+    border: 1px solid #ccc;
+    width: 72%;
+    height: 45px;
+}
+.infoDiv .info{
+    padding: 5px 0 0 10px;
+    float: left;
+}
+.uploader-list .error{
+    color:#ccc;
+    float: left;
+    padding: 5px 0 0 10px;
+}
+.info{
+    /*border:1px solid red;*/
+    color: #07ACA5;
+}
+.img-box{
+    margin-left: 19%;
+}
+.img-box .upimg-div .z_file,
+.upimg-div .up-section{
+    width: 120px;
+    height: auto;
+
+}
+.z_photo{
+    margin-left: 0;
+}
+.z_file .add-img,
+.z_photo .up-img{
+    width: 100%;
+    height: 178px;
+}
+button.finish{
+    width: 12%;
+    background-color: #07ACA5;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    margin: 0 0 2% 45%;
+    font-size: 16px;
+    letter-spacing: 6px;
+}
+.formDiv .tip{
+    font-size: 12px;
+    color: #07ACA5;
+    line-height: 0;
+    text-align: left;
+    /*float: left;*/
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.formDiv .errorI{
+    border: 1px solid #07ACA5;
+}
+footer{
+    text-align: center;
+    margin: 20px 0;
+}
+.passAlbum{
+    margin: 10px 0 0 11px;
+    padding-bottom: 15px;
+}
+.passAlbum li{
+    width: 138px;
+    height: 206px;
+    float: left;
+    margin: 0 20px 15px 0;
+    position: relative;
+}
+/*.passAlbum li .del{*/
+/*width: 100%;*/
+/*height: 26px;*/
+/*background: rgba(0,0,0,.3);*/
+/*position: absolute;*/
+/*top: 0;*/
+/*!*display: none;*!*/
+/*}*/
+.del{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.hover{
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.passAlbum li .del img{
+    width: 15px;
+    margin: 5px auto;
+    display: none;
+}
+.passAlbum li:nth-of-type(4n){
+    margin-right: 0;
+}
+.passAlbum li a{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #DFDFDF;
+    width: 138px;
+    height: 206px;
+}
+.passAlbum li img{
+    width: 100%;
+}
+/*下拉框样式*/
+input { outline:none; }
+.venue .bootstrap-select .btn:focus{
+    outline: 0!important;
+}
+.host .select2,.actor .select2,.family .select2,.venue .select2,.tagS .select2,.coinS .select2{
+    width: 100%!important;
+}
+.venue .btn-default:hover,.venue .open>.dropdown-toggle.btn-default{
+    background: transparent;
+    border-radius: 0;
+    color: #ccc;
+}
+.form-control[readonly]{
+    background-color: transparent;
+}
+/*日历控件样式*/
+table .switch{
+    color:#333;
+}
+th.dow{
+    color: #666;
+}
+td.day,td span.hour,td span.minute{
+    color:#393939;
+}
+.datetimepicker table tr td.disabled,
+td span.disabled,
+td span.disabled{
+    cursor: not-allowed;
+}
+.table-condensed>tbody>tr>td{
+    padding: 10px;
+}
+td.old,td.new{
+color:rgba(57,57,57,.3);
+}
+.datetimepicker table tr td.active.active,
+.datetimepicker table tr td.active.active,
+.datetimepicker table tr td.active:hover.active,
+.datetimepicker table tr td.day:hover{
+    background: #07ACA5;
+    border-radius: 50%;
+    color: #fff;
+}
+.datetimepicker table tr td span.active.active,
+.datetimepicker table tr td span:hover,
+.datetimepicker table tr td span.active.active,
+.datetimepicker table tr td span.active:hover.active{
+    background: #07ACA5;
+    color: #fff;
+}
+.datetimepicker table tr td.disabled:hover{
+    background: none;
+    color: #393939;
+    cursor: not-allowed;
+}
+.datetimepicker table tr td span.disabled, .datetimepicker table tr td span.disabled:hover{
+    cursor: not-allowed;
+}
+.select2-selection__clear{
+    display:none
+}
+/*选择厂牌*/
+.cBrandCon{
+    display: none;
+}
+.chooseBrand > li {
+    /*position: relative;*/
+    /*padding: 5px;*/
+    /*cursor: pointer;*/
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    width: 179px;
+    height: 64px;
+    max-height: 58px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.chooseBrand > li > img {
+    /*width: 100%;*/
+    /*transition: .1s transform;*/
+    /*transform: translateZ(0);*/
+    transition: .1s transform;
+    transform: translateZ(0);
+    height: auto;
+    max-height: 50px;
+}
+.chooseBrand > li:hover {
+    z-index: 1;
+}
+.chooseBrand > li:hover > img {
+    transform: scale(1.05, 1.05);
+    transition: .3s transform;
+}
+.chooseBrand > li:hover .checkState{
+    left: -2%;
+    top: 8%;
+}
+    /*选中状态*/
+.checkState{
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 15%;
+    display: none;
+}
+.defaultCheck{
+   display:block;
+}

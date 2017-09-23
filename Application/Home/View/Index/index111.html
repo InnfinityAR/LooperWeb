@@ -1,0 +1,111 @@
+<extend name="Base:base" />
+<block name="head">
+    <!--<script src="/Public/Home/js/function.js"></script>-->
+    <link rel="stylesheet" href="/Public/Home/css/index.css">
+</block>
+<block name="content">
+    <div class="main">
+        <div class="loopTitle"><img class="titleImg" src="/Public/Home/images/myloop.png"></div>
+        <div class="loopList">
+            <div class="loop create">
+                <a href="/create"><img src="/Public/Home/images/uploadLoop.png" ></a>
+            </div>
+            <foreach name="loops" item="loop">
+                <div class="loop">
+                    <a class="deleteLoop" loopid="{$loop['loopid']}"><img src="/Public/Home/images/close_input.png"></a>
+                    <a href="/show/{$loop['loopid']}"><img src="{$loop['loopcover']}" title="{$loop['looptitle']}"></a>
+                    <p>{$loop['looptitle']}</p>
+                    <p>曲目:{$loop['songsum']}</p>
+                </div>
+            </foreach>
+        </div>
+    </div>
+</block>
+<block name="script">
+    <script src='/Public/Home/js/velocity.js'></script>
+    <script src='/Public/Home/js/hammer.js'></script>
+    <script src='/Public/Home/js/muuri.js'></script>
+    <script>
+        $(function(){
+            documentHeight = $(".main").height()+$(".footer").height()+$(".copyrights").outerHeight();
+//            if(jsonUserInfo == true){
+//                $(".touxiang").css("display","none");
+//                $(".information .backOperate").css("display","none");
+//            }
+            p = "{$p}";
+            $(".create").height($(".create").width());
+            window.onresize=function(){
+                $(".create").height($(".create").width());
+            };
+            $(".loopList").scroll(function(){
+                nScrollHight = $(this)[0].scrollHeight;
+                nScrollTop = $(this)[0].scrollTop;
+                var paddingBottom = parseInt( $(this).css('padding-bottom') ),paddingTop = parseInt( $(this).css('padding-top') );
+                var divHieght = $(".loopList").height();
+                if(nScrollTop + paddingBottom + paddingTop + divHieght >= nScrollHight){
+                    var loadingIndex = layer.load(1, {
+                        shade: [0.1,'#fff'] //0.1透明度的白色背景
+                    });
+                    var data = {};
+                    data['p'] = p*1 + 1;
+                    $.ajax({
+                        type:"post",
+                        url:"{:U('index')}",
+                        data:data,
+                        success:function(res){
+                            layer.close(loadingIndex);
+                            if(res.status){
+                                var html = "";
+                                $.each(res.datas,function(k,v){
+                                    html += "<div class='loop col-md-3'>";
+                                    html += "<a class='deleteLoop' loopid='"+v.loopid+"'><img src='/Public/Home/images/close_input.png'></a>"
+                                    html += "<a href='javascript:;'><img src='"+v['loopcover']+"' title='"+v['looptitle']+"'></a>";
+                                    html += "<p>"+v['looptitle']+"</p>";
+                                    html += "<span>曲目:"+v['songsum']+"</span>";
+                                    html += "</div>";
+                                });
+                                $('.loopList').append(html);
+                                p = res.p;
+                            }else{
+                                layer.msg("已经没有了");
+                            }
+                        }
+                    })
+                }
+            })
+            $(".create").hover(function(){
+                $(this).find("img").attr("src","/Public/Home/images/uploadLoop_selected.png");
+            },function(){
+                $(this).find("img").attr("src","/Public/Home/images/uploadLoop.png");
+            })
+            
+            // 删除loop
+            $(document).on("mouseover",".loop",function(){
+                $(this).find(".deleteLoop").show();
+            })
+            $(document).on("mouseout",".loop",function(){
+                $(this).find(".deleteLoop").hide();
+            })
+            $(document).on("click",".deleteLoop",function(){
+                var loopid = $(this).attr('loopid');
+                layer.confirm("确定要删除此loop吗?",{btn:['确定','取消']},function(){
+                    $.ajax({
+                        type:"post",
+                        url:"http://api2.innfinityar.com/web/deleteLoop",
+                        data:{'loopId':loopid},
+                        success:function(res){
+                            if(res.status==0){
+                                layer.msg("删除成功");
+                                setTimeout(function(){
+                                    location.reload();
+                                },1000)
+                            }else{
+                                layer.msg("删除失败");
+                            }
+                        }
+                    })
+                })
+            })
+        })
+    </script>
+</block>

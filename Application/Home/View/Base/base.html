@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='/Public/Home/js/jquery-1.9.1.min.js'></script>
+        <link rel="shortcut icon" href="/Public/Home/images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="/Public/Static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/Public/Home/css/base.css">
+        <block name="head"></block>
+
+    </head>
+    <body>
+    <canvas style="position: absolute;z-index: -1" id="canvas" width="100%" height="100%">Internet Explorer 8 Not Supported</canvas>
+        <div class="wrap" >
+
+            <ul class="title">
+                <li>
+                    <a href="http://music.163.com/#/user/home?id=331177792" target="_blank">
+                        <img src="/Public/Home/images/netease.png" alt="">
+                    </a>
+                </li>
+                <li class="block">
+                    <img src="/Public/Home/images/wechat.png" alt="" />
+                    <span class="qrcode">
+                        <img src="/Public/Home/images/qrWechat.png" />
+                        <p>扫码关注微信公众号</p>
+                    </span>
+                </li>
+                <li class="block">
+                    <img src="/Public/Home/images/phone.png" alt="">
+                    <span class="qrcode">
+                        <img src="/Public/Home/images/qrApp.png" />
+                        <p>手机扫码进入下载</p>
+                    </span>
+                </li>
+                <li class="information">
+                    <div class="touxiang"></div>
+                    <a  class="loginOut text">切换用户</a>
+                    <br />
+                    <a class="text backOperate">返回主页</a>
+                </li>
+            </ul>
+            <block name="content"></block>
+            <p class="copyrights"> © LooperEDM 2017 沪ICP备16024766号</p>
+            <div class="footer">
+                <span><img src="/Public/Home/images/logo_word.png" alt="" /></span>
+            </div>
+        </div>
+        <script src="/Public/Static/bootstrap/js/bootstrap.js"></script>
+        <script src='/Public/Home/js/star.js'></script>
+        <script src='/Public/Static/layer/layer_zh-cn.js'></script>
+        <script src="/Public/Home/js/jquery.cookie.js"></script>
+        <block name="script"></block>
+        <script>
+            $(function(){
+                $("#canvas").attr('height', $(".wrap").height());
+                var windowWidth = $(window).width();
+//                var windowHeight = $(window).height();
+                window.onresize=function(){
+//                    $("#canvas").height(windowHeight);
+                    $("#canvas").height(documentHeight);
+                    $("#canvas").width(windowWidth);
+                };
+                $("#canvas").html5_3d_animation({
+                    window_width: windowWidth,
+                    window_height: documentHeight,
+//                    window_height: windowHeight,
+                    window_background: "#182314",
+                    star_count: '100',
+                    star_color: '#019c9a',
+                    star_depth: '800'
+                });
+//                退出登陆
+                $(".loginOut").click(function(){
+                    layer.confirm("确定退出当前账号?",{btn:["确定","取消"]},function(){
+                        $.cookie('userInfo',null,{expires:-1,path:'/'});
+                        location.href="{:U('Login/logout')}"
+
+                    });
+                });
+//                返回主页
+                $(".backOperate").click(function () {
+                    location.href="/Home/Index/operate/:"+jsonUserInfo['userid'];
+                });
+                // 显示二维码
+                $(".block").hover(function(){
+                    $(this).find(".qrcode").show();
+                },function(){
+                    $(this).find(".qrcode").hide();
+                })
+            })
+        </script>
+    </body>
+</html>

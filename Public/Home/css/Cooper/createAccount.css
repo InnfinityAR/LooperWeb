@@ -1,0 +1,195 @@
+.has-success .form-control,
+.has-success .form-control:focus{
+    border-color:#ccc
+}
+.form-control{
+    color: #ccc;
+}
+.main .loopTitle{
+    height: 50px;
+    color: #ccc;
+    line-height: 50px;
+    background: rgba(52,49,74,0.66);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+.content{
+    background: rgba(52,49,74,0.66);
+    padding-bottom: 30px;
+}
+.back{
+    text-align: right;
+    padding: 20px 20px 25px 0;
+}
+#province10,#city10,#district10{
+    padding-right: 0;
+    /*color: #ccc;*/
+}
+.symbol{
+    text-align: center;
+    margin-top: 10px;
+
+}
+label{
+    line-height: 35px;
+    text-align: right;
+    font-weight: normal;
+}
+#intro{
+    height: 250px;
+}
+.deHead{
+    text-align: left;
+    margin-top: 10px;
+    width: 105px;
+    height: 104px;
+    padding: 0;
+    margin-left: 15px;
+    background-color: #000000;
+    position: relative;
+    cursor: pointer;
+}
+.formDiv .deHead span{
+    line-height: 0;
+    position: absolute;
+    left: 25%;
+    top: 55%;
+    display: none;
+}
+#headImg{
+    width: 100%;
+}
+.hostLogo{
+    margin-top: 10px;
+}
+.logoText{
+    margin-top: 160px;
+    text-align: center;
+}
+.clickBtn{
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    width: 150px;
+    cursor: pointer;
+}
+.clickBtn span{
+    cursor: pointer;
+}
+.clickBtn:hover{
+    color: #ccc;
+}
+.thumbnail{
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 0;
+    border-radius: 0;
+    margin-top: 20px;
+}
+.tip{
+    color: #07ACA5;
+    /*margin: 20px 0 0 0;*/
+}
+.btnDiv{
+    margin-top: 20px;
+}
+.addBrand{
+    width: 241px;
+    height: 75px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.addBrand img{
+    width: 100%;
+}
+.passAlbum{
+    margin: 10px 0 0 11px;
+    padding-bottom: 15px;
+}
+.passAlbum li{
+    width: 138px;
+    height: 206px;
+    float: left;
+    margin: 0 20px 15px 0;
+    position: relative;
+}
+/*.passAlbum li .del{*/
+/*width: 100%;*/
+/*height: 26px;*/
+/*background: rgba(0,0,0,.3);*/
+/*position: absolute;*/
+/*top: 0;*/
+/*!*display: none;*!*/
+/*}*/
+.del{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.hover{
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.passAlbum li .del img{
+    width: 15px;
+    margin: 5px auto;
+    display: none;
+}
+.passAlbum li:nth-of-type(4n){
+    margin-right: 0;
+}
+.passAlbum li a{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #DFDFDF;
+    width: 138px;
+    height: 206px;
+}
+.passAlbum li img{
+    width: 100%;
+}
+.submit{
+    width: 15%;
+    margin: 50px auto 0 auto ;
+    background-color: #07ACA5;
+    color: #fff;
+}
+.greenBtn:hover{
+    color: #fff;
+}
+footer p{
+    text-align: center;
+    margin: 20px 0;
+}
+@media screen and (min-height:1400px ){
+    .content{
+        min-height:1400px;
+    }
+}
+/*选择厂牌css*/
+#addHostBrandModel .modal-content{
+    background: #2a2c38;
+}
+#addHostBrandModel .close{
+    color: #ccc;
+    opacity: 1;
+}
+#addHostBrandModel .modal-footer{
+    border-top: none;
+    text-align: center;
+}
+#addHostBrandModel .modal-header{
+    border-bottom: none;
+}
+#addHostBrandModel .modal-footer button{
+    background-color: #07ACA5;
+    color: #fff;
+    width: 15%;
+}

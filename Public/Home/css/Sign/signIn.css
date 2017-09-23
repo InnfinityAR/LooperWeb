@@ -1,0 +1,114 @@
+.form-control{
+    color: #ccc;
+}
+.form-group label{
+    font-weight: normal;
+}
+.content .greenBtn,.editBtn{
+    background-color: #07ACA5;
+    color: #fff;
+}
+.content .greenBtn.focus, .content .greenBtn:focus,.content .greenBtn:hover,.editBtn:focus,.editBtn:hover{
+    color: #fff;
+}
+.main .loopTitle{
+    height: 50px;
+    color: #ccc;
+    line-height: 50px;
+    background: rgba(52,49,74,0.66);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+.content{
+    background: rgba(52,49,74,0.66);
+}
+.content form{
+    padding-bottom: 30px;
+}
+.back{
+    padding: 20px 20px 20px 0;
+    text-align: right;
+}
+label{
+    line-height: 35px;
+    text-align: right;
+}
+select{
+    color: #ccc;
+}
+.yes{
+    border:1px solid #07ACA5!important;
+}
+.no{
+    border:1px solid #a94442!important;
+}
+
+.signBtn{
+    margin: 40px 0 0 0;
+}
+.deHead{
+    text-align: left;
+    margin-top: 10px;
+    width: 105px;
+    height: 104px;
+    padding: 0;
+    margin-left: 15px;
+    background-color: #000000;
+    position: relative;
+    cursor: pointer;
+}
+.formDiv .deHead span{
+    line-height: 0;
+    position: absolute;
+    left: 25%;
+    top: 55%;
+    display: none;
+}
+#headImg{
+    width: 100%;
+}
+footer p{
+    text-align: center;
+    margin: 20px 0;
+}
+.disNone{
+    display: none;
+}
+.disBlock{
+    display: block;
+}
+.willS .select2{
+    width: 100%!important;
+}
+@media screen and (max-height: 1600px)  {
+    .content {
+        height: 1400px;
+    }
+}
+@media screen and (max-height: 1440px)  {
+    .content {
+        height: 1240px;
+    }
+}
+@media screen and (max-height: 1200px)  {
+    .content {
+        height: 1000px;
+    }
+}
+@media screen and (max-height: 1080px)  {
+    .content {
+        height: 875px;
+    }
+}
+@media screen and (max-height: 900px)  {
+    .content {
+        height: 690px;
+    }
+}
+@media screen and (max-height: 800px)  {
+    .content {
+        height: auto;
+    }
+}

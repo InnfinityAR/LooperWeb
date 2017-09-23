@@ -1,0 +1,72 @@
+/*hostBrand.html 样式*/
+.form-group{
+    margin-bottom: 50px;
+}
+.btnDiv{
+    margin-top: 0;
+}
+.tip{
+    margin-top: 20px;
+}
+.host  .select2 {
+    width: 100%!important;
+}
+.select2-selection__clear{
+    display: none;
+}
+.uploadImgDiv{
+    width: 243px;
+    height: 76px;
+}
+/*hostBrandLisr.html样式*/
+.hostHead{
+    border: 1px solid rgba(255,255,255,0.2);
+    min-height: 117px;
+    height: 60px;
+    text-align: center;
+}
+.hostHead > .edit {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    display: none;
+    width: 20%;
+}
+.hostImg{
+    height: 60px;
+    max-height: 60px;
+}
+.hostHead img {
+    height: 100%;
+}
+.hostImg .avatar{
+    height: 100%;
+    width: auto;
+}
+@media (min-width: 992px) {
+    .hostHead,.hostImg{
+        min-height: 42px;
+        height: 42px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hostHead,.hostImg{
+       min-height: 60px
+    }
+}
+@media (min-width: 1600px){
+    .hostHead,.hostImg{
+        min-height: 70px
+    }
+}
+@media (min-width: 1900px){
+    .hostHead,.hostImg{
+        min-height: 86px
+    }
+}
+@media (min-width: 2560px){
+    .hostHead,.hostImg{
+        min-height: 117px
+    }
+}

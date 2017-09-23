@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+body{background-image: url('/Public/Home/images/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} .title{
+      top:0;
+      position: absolute;
+      padding-top: 20px;
+      width: 100%;
+  }
+.title{
+    top:0;
+    position: absolute;
+    padding-top: 20px;
+    width: 100%;
+}
+.title span{
+    float: right;
+    display: inline-block;
+    height: 35px;
+    margin-right: 2%
+}
+.title .block{
+    position: relative;
+}
+.title .block .qrcode{
+    display: none;
+    position: absolute;
+    left: -45px;
+    top:45px;
+    width: 120px;
+    text-align: center;
+}
+.title .block .qrcode img{
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+}
+.title .block .qrcode p{
+    margin-top: 20px;
+}
+.title span img{
+    height: 60%;
+}
+.title :first-child{
+    margin-right: 7%;
+}
+
+.word{
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 40%;
+}
+.logo{
+    position: absolute;
+    display: block;
+    width: 320px;
+    vertical-align: middle;
+    /*margin-top: 30%;*/
+    margin:auto;
+}
+.upload{
+    position: absolute;
+    display: block;
+    width: 80px;
+    vertical-align: middle;
+    /*margin-top: 30%;*/
+    margin:auto;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+}
+.footer img{
+    width: 20%;
+}
+.login{
+    position: absolute;
+    top:45%;
+    margin:auto;
+    width: 100%;
+    text-align: center;
+
+}
+.login .choose a{
+    margin:auto;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding-left: 2%;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    margin-top: 30px;
+    cursor:pointer;
+}
+.userEntry{
+    background-image: url('/Public/Home/images/personal.png');
+    background-size: 16%;
+    background-repeat: no-repeat;
+    background-position: 20%;
+}
+.coopEnter{
+    background-image: url('/Public/Home/images/cooperation.png');
+    background-size: 14%;
+    background-repeat: no-repeat;
+    background-position: 20%;
+}
+.dialog,.dialog1{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.dialog_bg{
+    background-color: #000;
+    opacity: 0.85;
+    -moz-opacity:0.85;
+    filter: alpha(opacity=50);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.dialog_info{
+    width: 200px;
+    /*height: 50px;*/
+    position: relative;
+    top: 45%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -100px;
+    /*border:1px solid red;*/
+}
+.dialog_info1{
+    margin-top: 20px;
+}
+/*.login .choose a:hover{*/
+    /*background-color: #fff;*/
+    /*color: #000;*/
+/*}*/
+/*.userEntry:hover{*/
+    /*background-image: url('/Public/Home/images/personalChoose.png');*/
+    /*background-size: 16%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 20%;*/
+/*}*/
+/*.coopEnter:hover{*/
+    /*background-image: url('/Public/Home/images/cooperationChoose.png');*/
+    /*background-size: 14%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 20%;*/
+/*}*/
+.phoneLogin,.coopLoginDiv{
+    display: none;
+    padding-top: 20px;
+    width: 300px;
+    height: 250px;
+    background-color: rgba(52,49,74,0.66);
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+}
+.phoneLogin form,.coopLoginDiv form{
+    width: 80%;
+    margin:auto;
+    display: inline-block;
+}
+.phoneLogin input[type='text'],.coopLoginDiv input{
+    box-sizing: border-box;
+    font-size:14px;
+    height:35px;
+    border-radius:4px;
+    /*border:1px solid #c8cccf;*/
+    background-color: #2e333a;
+    color:#ccc;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    display:block;
+    outline:0;
+    padding:0 1em;
+    text-decoration:none;
+    width:85%;
+    margin:auto;
+    margin-top: 30px;
+    border:none;
+}
+.phoneLogin form .code{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+.phoneLogin form .disabled,.coopLoginDiv form .disabled{
+    background-color: #566270;
+    color: #ccc;
+}
+.sendCode{
+    float: right;
+    margin-top: 30px;
+    font-size: 14px;
+    display: inline-block;
+    background-color: #4c77a0;
+    width: 45%;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+}
+.enter,.loginEnter{
+    clear: both;
+    display: block;
+    background-color: #2178c5;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 5px;
+    margin: 30px auto 0 auto;
+    border: none;
+    width: 85%;
+    cursor: pointer;
+}
+
+.copyrights{
+    font-size:12px;
+    color:white;
+    display:inline-block;
+    text-align:center;
+    width:100%;
+    line-height:50px;
+    height:50px;
+    margin: 0;
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 22px;
+    cursor: pointer;
+}
+
+html{
+    background-color:#000
+}
+
+
+
+.weChatEnter,
+.phoneEnter,
+.coopLogin,
+.coopSignIn{
+    display: inline-block;
+
+    padding-top: 45px;
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.weChatEnter{
+    background: url("/Public/Home/images/wechatUser.png") no-repeat;
+    background-size: 100%;
+    margin: 0 35% 0 10%;
+}
+.phoneEnter{
+    background: url("/Public/Home/images/phoneUser.png") no-repeat;
+    background-size: 100%;
+}
+.coopLogin{
+    background: url("/Public/Home/images/coopLogin.png") no-repeat;
+    background-size: 100%;
+    margin: 0 35% 0 10%;
+}
+.coopSignIn{
+    background: url("/Public/Home/images/coopSignIn.png") no-repeat;
+    background-size: 100%;
+}
+@media screen and (min-width: 1920px) {
+    .phoneLogin, .coopLoginDiv {
+        margin: 200px auto;
+    }
+}
+@media screen and (max-height: 500px) {
+    .word{
+        top: 35%;
+    }
+    .login,.dialog_info {
+        top: 42%;
+    }
+
+}

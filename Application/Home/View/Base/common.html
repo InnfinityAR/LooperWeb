@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='/Public/Home/js/jquery-1.9.1.min.js'></script>
+    <link rel="shortcut icon" href="/Public/Home/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Public/Static/bootstrap/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/Public/Static/bootstrap/css/bootstrapValidator.min.css">-->
+    <link rel="stylesheet" href="/Public/Home/css/Base/common.css">
+    <!--[if lt IE 9]>
+    <script src="/Public/Home/js/common/html5shiv.js"></script>
+    <script src="/Public/Home/js/common/respond.min.js"></script>
+    <![endif]-->
+    <block name="head"></block>
+</head>
+<body>
+    <nav class="width90 clearfix">
+        <ul class="title clearfix">
+            <li class="fLeft">
+                <a  href="javascript:void(0);" class="logo">
+                    <img src="/Public/Home/images/logoHeng.png" />
+                </a>
+            </li>
+            <li class="fRight">
+                <a style="margin-left: 15px" class="icon" href="http://music.163.com/#/user/home?id=331177792" target="_blank">
+                    <img src="/Public/Home/images/netease.png" alt="">
+                </a>
+            </li>
+            <li class="block fRight" style="margin-left: 10px" >
+                <div  class="icon wicon" href="javascript:void(0)">
+                    <img src="/Public/Home/images/wechat.png" alt="" />
+                </div>
+                <div class="qrcode">
+                    <img src="/Public/Home/images/qrWechat.png" />
+                    <p>扫码关注微信公众号</p>
+                </div>
+            </li>
+            <li class="block fRight">
+                <div class="icon picon" href="javascript:void(0)">
+                    <img src="/Public/Home/images/phone.png" alt="">
+                </div>
+                <div class="qrcode">
+                    <img src="/Public/Home/images/qrApp.png" />
+                    <p>手机扫码进入下载</p>
+                </div>
+            </li>
+            <li class="information">
+                <div class="touxiang"></div>
+                <div class="operaBtn">
+                    <button type="button" class="btn-block loginOut text">切换用户</button>
+                    <button type="button" class="btn-block text backOperate">返回主页</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <block name="content"></block>
+
+<script src="/Public/Static/bootstrap/js/bootstrap.js"></script>
+<script src="/Public/Static/bootstrap/js/bootstrapValidator.min.js"></script>
+<script src='/Public/Home/js/star.js'></script>
+<script src='/Public/Static/layer/layer_zh-cn.js'></script>
+<script src="/Public/Home/js/jquery.cookie.js"></script>
+<script src="/Public/Home/js/common/function.js"></script>
+    <script src="/Public/Home/js/webreload.js"></script>
+<script src="/Public/Home/js/Base/common.js"></script>
+
+    <script>
+        $(function () {
+            //                退出登陆
+            $(".loginOut").click(function(){
+                layer.confirm("确定退出当前账号?",{btn:["确定","取消"]},function(){
+                    $.cookie('userInfo',null,{expires:-1,path:'/'});
+                    location.href="{:U('Login/logout')}"
+
+                });
+            });
+        })
+    </script>
+<block name="script"></block>
+</body>
+</html>

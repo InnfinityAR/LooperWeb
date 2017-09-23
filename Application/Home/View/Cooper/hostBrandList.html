@@ -1,0 +1,37 @@
+<extend name="Base:common" />
+<block name="head">
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/accountList.css">
+    <link rel="stylesheet" href="/Public/Home/css/Cooper/hostBrand.css">
+</block>
+<block name="content">
+    <div class="main width70">
+        <!--标题-->
+        <div class="loopTitle">主办方品牌列表</div>
+        <!--主题内容-->
+        <div class="listContent">
+            <!--返回-->
+            <div class="back clearfix">
+                <a href="/Home/Cooper/index" >返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+            </div>
+            <!--上传主办方-->
+            <div class="list clearfix">
+                <ul class="hostBrandList clearfix">
+                    <li class="col-sm-3 col-xs-3 col-md-3 col-lg-3 addImg">
+                        <a href="/Home/Cooper/hostBrand">
+                            <img class="img-responsive" src="/Public/Home/images/addBrand.png" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="brand">
+        <img src="/Public/Home/images/logo_word.png" alt="" />
+    </div>
+    <footer>
+        <p class="copyrights"> © LooperEDM 2017 沪ICP备16024766号</p>
+    </footer>
+</block>
+<block name="script">
+    <script src="/Public/Home/js/Cooper/hostBrandList.js"></script>
+</block>
