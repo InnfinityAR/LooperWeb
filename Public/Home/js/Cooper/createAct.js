@@ -181,7 +181,9 @@ $(function () {
                     for(var i=0;i<res.data.length;i++){
                         var html = "";
                         html += '<li class="col-sm-6 ">';
-                        html +=     '<img src="'+ res.data[i]+'" alt="">';
+                        // html +=     '<div>';
+                        html +=         '<img src="'+ res.data[i]+'" alt="">';
+                        // html +=     '</div>';
                         html +=     '<span class="checkState" >';
                         html +=         '<img src="/Public/Home/images/checked.png" alt="">';
                         html +=     '</span>';

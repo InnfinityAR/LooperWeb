@@ -30,8 +30,10 @@
   cursor: text;
 }
 .fileinput .thumbnail {
-  display: inline-block;
+  display: table-cell;
+  /*display: inline-block;*/
   margin-bottom: 5px;
+  margin-top: 10px;
   overflow: hidden;
   text-align: center;
   vertical-align: middle;

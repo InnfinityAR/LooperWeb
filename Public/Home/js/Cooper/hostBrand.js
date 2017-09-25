@@ -86,11 +86,11 @@ $(function () {
                                      var i = 3;
                                      var timer = null;
                                      var fn = function() {
-                                         layero.find(".layui-layer-content").text(msg+i+'秒后跳转至主办方品牌列表页');
+                                         layero.find(".layui-layer-content").text(msg+i+'秒后返回上一页');
                                          if(!i) {
                                              layer.close(index);
                                              clearInterval(timer);
-                                             location.href = "/Home/Cooper/hostBrandList"
+                                             location.href = "history.go(-1)"
                                          }
                                          i--;
                                      };
@@ -135,11 +135,11 @@ $(function () {
                                          var i = 3;
                                          var timer = null;
                                          var fn = function() {
-                                             layero.find(".layui-layer-content").text(msg+i+'秒后跳转至主办方品牌列表页');
+                                             layero.find(".layui-layer-content").text(msg+i+'秒后返回上一页');
                                              if(!i) {
                                                  layer.close(index);
                                                  clearInterval(timer);
-                                                 location.href = "/Home/Cooper/hostBrandList"
+                                                 location.href = "history.go(-1);"
                                              }
                                              i--;
                                          };

@@ -120,6 +120,7 @@ $(function () {
         type:"post",
         url:web_url+"getClub",
         data: data,
+        async:false,
         success:function (res) {
             var html = "";
             $.each(res.club,function (k,v) {
@@ -150,6 +151,7 @@ $(function () {
         type:"post",
         url:web_url+"getRaver",
         data: data,
+        async:false,
         success:function (res) {
             $("#familyS").html("");
             var html = "";
@@ -267,7 +269,7 @@ $(function () {
                 }
             }
             //场馆
-            var club = res.club[0].clubid;
+            var club = res.club.clubid;
             for(var i=0;i<$("#venueS option").length;i++)
             {
                 if($("#venueS option").eq(i).val() == club){

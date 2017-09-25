@@ -10,7 +10,46 @@ $(function () {
         $(".deHead img").css('opacity', '1');
         $(".deHead span").css('display', 'none');
     });
-    $(".submit").click(function () {
+    //主办方旗下品牌添加
+    $(".saveBrand").click(function(){
+        $(".saveBrand"). removeAttr("data-dismiss");
+        if($("#brandName").val()==""){
+            layer.msg("请填写品牌名称");
+        }else if($(".uploadBrand img").length==0){
+            layer.msg("请上传品牌Logo");
+        }else{
+            $(".saveBrand").attr("data-dismiss","modal");
+            var brandName = $("#brandName").val();
+            var brandLogo = $(".uploadBrand img").attr("src");
+            $(".addBrandList").append(
+                "<li class='addBrandLi'>"+
+                    "<div class='brandData'>"+
+                        "<span class='hostBrandName'>"+brandName+"</span>"+
+                        "<img class='brandImg' src="+brandLogo+" alt=''>"+
+                    "</div>"+
+                    "<span class='delBrand'>"+
+                        "<img src='/Public/Home/images/del.png' alt=''>"+
+                    "</span>"+
+                "</li>"
+            );
+
+        }
+        // 关闭model强制清除数据
+        $("#addHostBrandModel").on("hidden.bs.modal", function() {
+            $("#brandName").val("");
+        });
+        //删除添加厂牌事件
+        $(".delBrand").click(function () {
+            var thisDel = $(this).parent('.addBrandLi');
+            layer.confirm("确定删除该活动吗?", {btn: ["确定", "取消"]}, function () {
+                layer.closeAll('dialog');
+                thisDel.remove();
+            });
+        });
+    });
+
+    //提交事件
+     $(".submit").click(function () {
         var bootstrapValidator = $("#formInfo").data('bootstrapValidator');
         var flag  =  bootstrapValidator.validate().isValid();
         if(flag){
@@ -63,6 +102,14 @@ $(function () {
             }else {
                 data['avatar'] = $("#headImg").prop("src");
             }
+            var brandArr = []; //主办方旗下品牌
+            for(var i = 0 ; i < $("li.addBrandLi").length;i++){
+                var branName1 = $("li.addBrandLi:eq("+i+") span").text();
+                var brandLogo1 = $("li.addBrandLi:eq("+i+") img").attr("src").split(",")[1];
+                brandArr[i] = [brandLogo1,branName1]
+            }
+            console.log(brandArr);
+            data['brand'] = brandArr;
             data['coverImages'] = photos;
             // data['clubAddress'] = $(".inp").val();
             var headImgSrc = $("#headImg").prop("src");

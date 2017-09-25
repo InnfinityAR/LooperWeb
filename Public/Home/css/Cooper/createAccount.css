@@ -90,16 +90,16 @@ label{
 }
 .tip{
     color: #07ACA5;
-    /*margin: 20px 0 0 0;*/
+    margin: 10px 0 10px 0;
 }
 .btnDiv{
     margin-top: 20px;
 }
 .addBrand{
-    width: 241px;
-    height: 75px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    /*width: 241px;*/
+    /*height: 75px;*/
+    /*margin-top: 10px;*/
+    /*margin-bottom: 30px;*/
     cursor: pointer;
 }
 .addBrand img{
@@ -172,6 +172,57 @@ footer p{
     .content{
         min-height:1400px;
     }
+}
+/*添加厂牌List*/
+.hostBrandName{
+    display: none;
+}
+.addBrandLi{
+    border: 1px solid rgba(255,255,255,.1);
+    position: relative;
+}
+.addBrandList{
+    width:550px;
+}
+.addBrandList li{
+    width: 241px;
+    height: 78px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.addBrandList li:nth-child(2n){
+    margin-left: 30px;
+}
+.brandData{
+    /*max-width: 243px;*/
+    /*max-height: 76px;*/
+    width: 243px;
+    height: 76px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.brandData > img,.uploadBrand>img{
+    /*height: 76px;*/
+    /*width: 100%;*/
+    border: none;
+    max-width: 100%!important;
+    height: auto!important;
+    max-height: 76px!important;
+}
+.delBrand img{
+    width: 100%;
+}
+.delBrand{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    z-index: 22;
 }
 /*选择厂牌css*/
 #addHostBrandModel .modal-content{

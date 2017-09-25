@@ -7,18 +7,18 @@ $(function () {
             "marginTop":(($(document).height() - $(".main").height() - 160)/2)
         });
     },0);
-   $(".act").click(function () {
-      location.href = "/Home/Cooper/actList"
-   });
-    $(".venue").click(function () {
-        location.href = "/Home/Cooper/venueList"
-    });
-    $(".host").click(function () {
-        location.href = "/Home/Cooper/hostList"
-    });
-    $(".family").click(function () {
-        location.href = "/Home/Cooper/familyList"
-    });
+   // $(".act").click(function () {
+   //    location.href = "/Home/Cooper/actList"
+   // });
+   //  $(".venue").click(function () {
+   //      location.href = "/Home/Cooper/venueList"
+   //  });
+   //  $(".host").click(function () {
+   //      location.href = "/Home/Cooper/hostList"
+   //  });
+   //  $(".family").click(function () {
+   //      location.href = "/Home/Cooper/familyList"
+   //  });
     $(".information .operaBtn .backOperate").css({
         "display" : "none"
     });

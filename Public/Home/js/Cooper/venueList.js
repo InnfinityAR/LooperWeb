@@ -17,7 +17,7 @@ $(function () {
                     html += '<li class="col-sm-3 col-xs-3 col-md-3 col-lg-3">';
                     html +=  '<div class="hostHead">';
                     html +=      '<span class="hostImg">';
-                    html +=          '<img src='+ v.avatar[0] +' alt="">';
+                    html +=          '<img src='+ v.avatar +' alt="">';
                     html +=      '</span>';
                     html +=      '<span class="edit" data-index="'+k+'">';
                     html +=          '<img src="/Public/Home/images/editA.png"  alt="">';
@@ -79,7 +79,7 @@ $(function () {
                             html += '<li class="col-sm-3 col-xs-3 col-md-3 col-lg-3">';
                             html +=  '<div class="hostHead">';
                             html +=      '<span class="hostImg">';
-                            html +=          '<img src='+ v.avatar[0] +' alt="">';
+                            html +=          '<img src='+ v.avatar +' alt="">';
                             html +=      '</span>';
                             html +=      '<span class="edit" data-index="'+k+'">';
                             html +=          '<img src="/Public/Home/images/editA.png"  alt="">';
