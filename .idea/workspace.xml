@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3995a9db-971b-4c5d-b733-fe7100578430" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/actList.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/actList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/Cooper/accountList.css" afterPath="$PROJECT_DIR$/Public/Home/css/Cooper/accountList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/createAct.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/createAct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/createAct.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/createAct.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/common/validator.js" afterPath="$PROJECT_DIR$/Public/Home/js/common/validator.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +23,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="actList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/actList.html">
+      <file leaf-file-name="createAct.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createAct.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+            <state relative-caret-position="676">
+              <caret line="122" column="67" lean-forward="false" selection-start-line="122" selection-start-column="67" selection-end-line="122" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#7;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="e#6637#6643#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#8;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/js/common/validator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1576">
+              <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createVenue.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459">
+              <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -41,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accountList.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="accountList.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/css/Cooper/accountList.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -64,8 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image-dialog-open</find>
-      <find>cropType</find>
       <find>closePopupCallBack1</find>
       <find>manyPicId</find>
       <find>dataSizeW</find>
@@ -94,6 +120,8 @@
       <find>hostImg</find>
       <find>actList</find>
       <find>actHistoryList</find>
+      <find>getBrandByHostId</find>
+      <find>441900</find>
     </findStrings>
     <dirStrings>
       <dir>D:\phpStudy\WWW\LooperWeb-master\Application</dir>
@@ -143,21 +171,21 @@
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/index.css" />
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/hostBrand.js" />
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/hostBrand.css" />
-        <option value="$PROJECT_DIR$/Public/Home/js/webreload.js" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Cooper/editHost.html" />
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/editHost.js" />
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/createAccount.css" />
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/createHost.js" />
+        <option value="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" />
+        <option value="$PROJECT_DIR$/Public/Home/css/Cooper/accountList.css" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/actList.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html" />
+        <option value="$PROJECT_DIR$/Public/Home/js/webreload.js" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php" />
+        <option value="$PROJECT_DIR$/Public/Home/js/Cooper/createAct.js" />
+        <option value="$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js" />
         <option value="$PROJECT_DIR$/Public/Home/js/common/validator.js" />
         <option value="$PROJECT_DIR$/Application/Home/View/Cooper/createAct.html" />
-        <option value="$PROJECT_DIR$/Public/Home/js/Cooper/createAct.js" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html" />
-        <option value="$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js" />
-        <option value="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/actList.html" />
-        <option value="$PROJECT_DIR$/Public/Home/css/Cooper/accountList.css" />
       </list>
     </option>
   </component>
@@ -318,33 +346,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Looper" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
+              <option name="myItemId" value="distpicker" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -849,15 +851,15 @@
       <workItem from="1506049567049" duration="21737000" />
       <workItem from="1506168094578" duration="9186000" />
       <workItem from="1506307399619" duration="24746000" />
-      <workItem from="1506394078043" duration="12779000" />
+      <workItem from="1506394078043" duration="18495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="830034000" />
+    <option name="totallyTimeSpent" value="835750000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21669106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -913,13 +915,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Static/Cropper/js/ajaxfileupload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="157" column="8" lean-forward="false" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../web后台版本/looper2.1/looper-pro/Application/Home/View/Cooper/createAct.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1971">
@@ -1032,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/venueList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -1141,22 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/webreload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/editHost.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1237,54 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/common/validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="132" column="20" lean-forward="true" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="489" column="22" lean-forward="false" selection-start-line="489" selection-start-column="22" selection-end-line="489" selection-end-column="22" />
-          <folding>
-            <element signature="e#4778#6557#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="131" column="91" lean-forward="false" selection-start-line="131" selection-start-column="91" selection-end-line="131" selection-end-column="91" />
-          <folding>
-            <element signature="e#5985#5991#0" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#7;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/createAct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="299" column="14" lean-forward="false" selection-start-line="299" selection-start-column="14" selection-end-line="301" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createAct.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="91" />
-          <folding>
-            <element signature="e#6093#6099#0" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#7;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/hostList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -1292,14 +1216,6 @@
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/actList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,6 +1234,94 @@
         <state relative-caret-position="230">
           <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/actList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="207" column="21" lean-forward="false" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/createAct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="197" column="19" lean-forward="false" selection-start-line="197" selection-start-column="19" selection-end-line="199" selection-end-column="21" />
+          <folding>
+            <element signature="e#5883#6526#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="106" column="76" lean-forward="false" selection-start-line="106" selection-start-column="76" selection-end-line="106" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/webreload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Static/distpicker/distpicker.data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="2423" column="13" lean-forward="true" selection-start-line="2423" selection-start-column="13" selection-end-line="2423" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/common/validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1576">
+          <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createAct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="122" column="67" lean-forward="false" selection-start-line="122" selection-start-column="67" selection-end-line="122" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#7;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="e#6637#6643#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#8;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

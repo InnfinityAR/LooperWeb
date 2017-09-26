@@ -117,7 +117,14 @@ $(function () {
            tag:{
                validators: {
                    notEmpty: {
-                       message: '请选择标签'
+                       message: '请选择曲风'
+                   }
+               }
+           },
+           tagType:{
+               validators: {
+                   notEmpty: {
+                       message: '请选择类型'
                    }
                }
            },
@@ -165,14 +172,14 @@ $(function () {
                    }
                }
            },
-           district10:{
-               group:".col-sm-4",
-               validators: {
-                   notEmpty: {
-                       message: '请选择区'
-                   }
-               }
-           },
+           // district10:{
+           //     group:".col-sm-4",
+           //     validators: {
+           //         notEmpty: {
+           //             message: '请选择区'
+           //         }
+           //     }
+           // },
            detailedAddr:{
                group:".col-sm-5",
                validators: {

@@ -64,24 +64,41 @@ $(function () {
     $(".endT span").on("click",function(){
         clearTime("#eTime")
     });
-    //标签list
+    //标签曲风list
     var dataList = [
         { id: 'FESTIVAL', text: 'FESTIVAL' },
         { id: 'EDM', text: 'EDM' },
         { id: 'HOUSE', text: 'HOUSE' },
-        { id: 'DISCO', text: 'DISCO' },
+        { id: 'TRAP', text: 'TRAP' },
         { id: 'TRANCE', text: 'TRANCE' },
         { id: 'TECHNO', text: 'TECHNO' },
+        { id: 'HIP-HOP', text: 'HIP-HOP' },
+        { id: 'DUBSTEP ', text: 'DUBSTEP ' },
+        { id: 'TRIP-HOP ', text: 'TRIP-HOP ' },
+        { id: 'TROPICAL ', text: 'TROPICAL' },
+        { id: 'HARDSTYLE', text: 'HARDSTYLE' },
+        { id: 'BASS', text: 'BASS' },
         { id: 'HARDCORE', text: 'HARDCORE' },
         { id: 'INDUSTRIRL', text: 'INDUSTRIRL' },
         { id: 'DOWNTEMPO', text: 'DOWNTEMPO' },
-        { id: 'HIP-HOP', text: 'HIP-HOP' },
         { id: 'GARAGE', text: 'GARAGE' },
-        { id: 'BREAKS', text: 'BREAKS' }
+        { id: 'BREAKS', text: 'BREAKS' },
+        { id: 'DISCO', text: 'DISCO' }
+    ];
+    //标签类型List
+    var tagTypeList = [
+        { id: '音乐节', text: '音乐节' },
+        { id: '仓库派对', text: '仓库派对' },
+        { id: '夜店演出', text: '夜店演出' }
     ];
     $("#tag").select2({
         data: dataList,
-        placeholder: "请选择标签",
+        placeholder: "请选择曲风",
+        allowClear: true
+    });
+    $("#tagType").select2({
+        data: tagTypeList,
+        placeholder: "请选择类型",
         allowClear: true
     });
     //请求主办方
@@ -178,18 +195,23 @@ $(function () {
                 url:web_url+"getBrandByHostId",
                 async:false,
                 success:function (res) {
-                    for(var i=0;i<res.data.length;i++){
-                        var html = "";
-                        html += '<li class="col-sm-6 ">';
-                        // html +=     '<div>';
-                        html +=         '<img src="'+ res.data[i]+'" alt="">';
-                        // html +=     '</div>';
-                        html +=     '<span class="checkState" >';
-                        html +=         '<img src="/Public/Home/images/checked.png" alt="">';
-                        html +=     '</span>';
-                        html += '</li>';
-                        $(".chooseBrand").append(html)
+                    if(res.data == ""){
+                        $(".cBrandCon").css("display","none");
+                    }else{
+                        for(var i=0;i<res.data.length;i++){
+                            var html = "";
+                            html += '<li class="col-sm-6 ">';
+                            // html +=     '<div>';
+                            html +=         '<img src="'+ res.data[i]+'" alt="">';
+                            // html +=     '</div>';
+                            html +=     '<span class="checkState" >';
+                            html +=         '<img src="/Public/Home/images/checked.png" alt="">';
+                            html +=     '</span>';
+                            html += '</li>';
+                            $(".chooseBrand").append(html)
+                        }
                     }
+
                 }
             });
             //选择厂牌效果
