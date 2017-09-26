@@ -217,6 +217,9 @@ footer{
 .main div.hostLoopTitle{
     background-color: transparent;
 }
+.hostBrandList li{
+    margin-bottom: 40px;
+}
 /*hostBrandLisr*/
 #hostBrandListTab .hostHead{
     border: 1px solid rgba(255,255,255,0.2);
@@ -235,6 +238,12 @@ footer{
     height: 60px;
     max-height: 60px;
 }
+/*.hostBrandList li .hostImg {*/
+    /*height: 60px;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*text-align: center;*/
+/*}*/
 #hostBrandListTab .hostHead img {
     height: 100%;
 }
@@ -254,21 +263,25 @@ footer{
 }
 @media (min-width: 1200px) {
     #hostBrandListTab .hostHead,#hostBrandListTab  .hostImg{
-        min-height: 60px
+        min-height: 60px;
+        height:60px;
     }
 }
 @media (min-width: 1600px){
     #hostBrandListTab  .hostHead,#hostBrandListTab  .hostImg{
-        min-height: 70px
+        min-height: 70px;
+        height:70px;
     }
 }
 @media (min-width: 1900px){
     #hostBrandListTab  .hostHead,#hostBrandListTab  .hostImg{
-        min-height: 86px
+        min-height: 86px;
+        height:86px;
     }
 }
 @media (min-width: 2560px){
     #hostBrandListTab  .hostHead,#hostBrandListTab .hostImg{
-        min-height: 117px
+        min-height: 117px;
+        height:117px;
     }
 }

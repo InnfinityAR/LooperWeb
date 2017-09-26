@@ -297,7 +297,9 @@ $(function () {
                 data1['cname'] = cname;
                 data1['tag'] = tag;
                 var money;
-                if($('.money2').val()!="" && $('.money2').val()!=$('.money1').val()){
+                if($('.money1').val()=="" && $('.money2').val()==""  ){
+                    money = "暂无"
+                }else if($('.money2').val()!="" && $('.money2').val()!=$('.money1').val()){
                     money = $("#coin").val()+$('.money1').val()+ '-'+$('.money2').val();
                 }else{
                     money = $("#coin").val()+$('.money1').val()

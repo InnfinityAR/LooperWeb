@@ -108,7 +108,6 @@ $(function () {
                 var brandLogo1 = $("li.addBrandLi:eq("+i+") img").attr("src").split(",")[1];
                 brandArr[i] = [brandLogo1,branName1]
             }
-            console.log(brandArr);
             data['brand'] = brandArr;
             data['coverImages'] = photos;
             // data['clubAddress'] = $(".inp").val();

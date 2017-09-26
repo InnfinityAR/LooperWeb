@@ -124,9 +124,9 @@ $(function () {
            money1:{
                group:".col-sm-2",
                validators: {
-                   notEmpty: {
-                       message: '请输入价格'
-                   },
+                   // notEmpty: {
+                   //     message: '请输入价格'
+                   // },
                    regexp: {
                        regexp:  /(^[1-9]\d*(\.\d{1,2})?$)|(^[0]{1}(\.\d{1,2})?$)/,
                        message: '价格不合法'

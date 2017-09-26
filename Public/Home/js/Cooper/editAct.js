@@ -286,10 +286,12 @@ $(function () {
             }
             //票价
             var price = res.data.price;
-            if(price == '免费'){
+            if(price == "暂无"){
+                $(".money1").val();
+                $(".money2").val();
+            }else if(price == '免费'){
                 $(".money1").val("0")
-            }else if(price.indexOf("-") > 0 )
-            {
+            }else if(price.indexOf("-") > 0 ){
                 var priceArr = price.split("-");
                 $(".money1").val(priceArr[0].substring(1));
                 $(".money2").val(priceArr[1]);
@@ -483,7 +485,9 @@ $(function () {
                 data1['cname'] = cname;
                 data1['tag'] = tag;
                 var money;
-                if($('.money2').val()!="" && $('.money2').val()!=$('.money1').val()){
+                if($('.money1').val()=="" && $('.money2').val()==""  ){
+                    money = "暂无"
+                }else if($('.money2').val()!="" && $('.money2').val()!=$('.money1').val()){
                     money = $("#coin").val()+$('.money1').val()+ '-'+$('.money2').val();
                 }else{
                     money = $("#coin").val()+$('.money1').val()

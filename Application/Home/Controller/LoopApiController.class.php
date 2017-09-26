@@ -4,7 +4,7 @@ namespace Home\Controller;
 
 class LoopApiController {
 
-    private $Server = "http://api2.innfinityar.com/web/";
+    private $Server = "http://api3.innfinityar.com/web/";
     private $timestamp;  //时间戳
     private $BodyType = "json"; //包体格式，可填值：json 、xml
     private $Version = 1; //版本

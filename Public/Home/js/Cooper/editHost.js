@@ -17,6 +17,43 @@ $(function () {
     }
     //调用方法
      id =getQueryString1(url,"id");
+    //主办方旗下品牌添加
+    $(".saveBrand").click(function(){
+        $(".saveBrand"). removeAttr("data-dismiss");
+        if($("#brandName").val()==""){
+            layer.msg("请填写品牌名称");
+        }else if($(".uploadBrand img").length==0){
+            layer.msg("请上传品牌Logo");
+        }else{
+            $(".saveBrand").attr("data-dismiss","modal");
+            var brandName = $("#brandName").val();
+            var brandLogo = $(".uploadBrand img").attr("src");
+            $(".addBrandList").append(
+                "<li class='addBrandLi'>"+
+                "<div class='brandData'>"+
+                "<span class='hostBrandName'>"+brandName+"</span>"+
+                "<img class='brandImg' src="+brandLogo+" alt=''>"+
+                "</div>"+
+                "<span class='delBrand'>"+
+                "<img src='/Public/Home/images/del.png' alt=''>"+
+                "</span>"+
+                "</li>"
+            );
+
+        }
+        // 关闭model强制清除数据
+        $("#addHostBrandModel").on("hidden.bs.modal", function() {
+            $("#brandName").val("");
+        });
+        //删除添加厂牌事件
+        $(".delBrand").click(function () {
+            var thisDel = $(this).parent('.addBrandLi');
+            layer.confirm("确定删除该活动吗?", {btn: ["确定", "取消"]}, function () {
+                layer.closeAll('dialog');
+                thisDel.remove();
+            });
+        });
+    });
     //获取主办方数据
     var data = {};
     data['userId'] =jsonUserInfo['userid'];
@@ -27,12 +64,39 @@ $(function () {
         data:data,
         url:web_url+"getDjById",
         success:function (res) {
-            $("#userName").val(res.data.hostname);
-            $("#intro").val(res.data.hostdes);
+            $("#userName").val(res.data.hostname); //主办方名称
+            $("#intro").val(res.data.hostdes); //主办方简介
+            //主办方头像
             $("#headImg").prop("src",res.data.avatar[0]);
+            //主办方Logo
             if(res.data.hostlogo != ""){
                 $("#picImg").prop("src",res.data.hostlogo);
             }
+            //主办方厂牌
+            if(res.brand!=""){
+                $.each(res.brand,function (k,v) {
+                    $(".addBrandList").append(
+                        "<li class='addBrandLi'>"+
+                        "<div class='brandData'>"+
+                        "<span class='hostBrandName'>"+v.brandname+"</span>"+
+                        "<img class='brandImg' src="+v.avatar+" alt=''>"+
+                        "</div>"+
+                        "<span class='delBrand'>"+
+                        "<img src='/Public/Home/images/del.png' alt=''>"+
+                        "</span>"+
+                        "</li>"
+                    );
+                });
+                //删除添加厂牌事件
+                $(".delBrand").click(function () {
+                    var thisDel = $(this).parent('.addBrandLi');
+                    layer.confirm("确定删除该活动吗?", {btn: ["确定", "取消"]}, function () {
+                        layer.closeAll('dialog');
+                        thisDel.remove();
+                    });
+                });
+            }
+            //相册
             var images = res.data.images;
             if(images!=null){
                 images =  images.split(';');
@@ -137,6 +201,20 @@ $(function () {
             }else {
                 data['avatar'] = $("#headImg").prop("src");
             }
+            var brandArr = [], //主办方旗下品牌
+                branName1, //品牌名称
+                brandLogo1; //品牌Logo
+            for(var i = 0 ; i < $("li.addBrandLi").length;i++){
+                 branName1 = $("li.addBrandLi:eq("+i+") span").text();
+                 if($("li.addBrandLi:eq("+i+") img").attr("src").indexOf("http://api")>-1){
+                     brandLogo1 = $("li.addBrandLi:eq("+i+") img").attr("src");
+                 }else {
+                     brandLogo1 = $("li.addBrandLi:eq("+i+") img").attr("src").split(",")[1];
+                 }
+
+                brandArr[i] = [brandLogo1,branName1]
+            }
+            data['brand'] = brandArr;
             data['coverImages'] = photos;
             var headImgSrc = $("#headImg").prop("src");
             if(headImgSrc.indexOf('/Public/Home/images/defaultHead.png')>-1){
