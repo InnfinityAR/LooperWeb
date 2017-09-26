@@ -5,36 +5,81 @@
 <block name="content">
     <div class="main width70">
         <!--标题-->
-        <div class="loopTitle">活动列表</div>
-        <!--主题内容-->
-        <div class="listContent">
-            <!--返回-->
-            <div class="back clearfix">
-                <div class="search">
-                    <input type="text" placeholder="搜索活动">
-                    <span class="searchBtn">
+        <!--标题-->
+        <div class="loopTitle hostLoopTitle">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active firstLi">
+                    <a href="#actListTab" aria-controls="actListTab" role="tab" data-toggle="tab">
+                        <span>活动列表</span>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#historyListTab" aria-controls="historyListTab" role="tab" data-toggle="tab">
+                        <span>历史活动列表</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="actListTab">
+                <!--主题内容-->
+                <div class="listContent">
+                    <!--返回-->
+                    <div class="back clearfix">
+                        <div class="search">
+                            <input type="text" placeholder="搜索活动">
+                            <span class="searchBtn">
                         <img src="/Public/Home/images/search.png" alt="">
                     </span>
+                        </div>
+                        <span class="lookAll">全部活动</span>
+                        <a href="/Home/Cooper/index" >返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+                    </div>
+                    <!--上传活动-->
+                    <div class="list clearfix">
+                        <ul class="actList clearfix">
+                            <li class="addActImg">
+                                <a href="/Home/Cooper/createAct">
+                                    <img class="" src="/Public/Home/images/add1.png" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--搜索结果-->
+                    <div class="searchlist clearfix">
+                        <ul class="reActList clearfix">
+                        </ul>
+                    </div>
                 </div>
-                <span class="lookAll">全部活动</span>
-                <a href="/Home/Cooper/index" >返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
             </div>
-            <!--上传活动-->
-            <div class="list clearfix">
-                <ul class="actList clearfix">
-                    <li class="addActImg">
-                        <a href="/Home/Cooper/createAct">
-                            <img class="" src="/Public/Home/images/add1.png" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--搜索结果-->
-            <div class="searchlist clearfix">
-                <ul class="reActList clearfix">
-                </ul>
+            <div role="tabpanel" class="tab-pane" id="historyListTab">
+                <!--主题内容-->
+                <div class="listContent">
+                    <!--&lt;!&ndash;返回&ndash;&gt;-->
+                    <!--<div class="back clearfix">-->
+                        <!--<div class="search">-->
+                            <!--<input type="text" placeholder="搜索活动">-->
+                            <!--<span class="searchBtn">-->
+                        <!--<img src="/Public/Home/images/search.png" alt="">-->
+                    <!--</span>-->
+                        <!--</div>-->
+                        <!--<span class="lookAll">全部活动</span>-->
+                        <!--<a href="/Home/Cooper/index" >返回&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>-->
+                    <!--</div>-->
+                    <!--上传活动-->
+                    <div class="list clearfix">
+                        <ul class="actHistoryList clearfix">
+                        </ul>
+                    </div>
+                    <!--&lt;!&ndash;搜索结果&ndash;&gt;-->
+                    <!--<div class="searchlist clearfix">-->
+                        <!--<ul class="reActList clearfix">-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
             </div>
         </div>
+
     </div>
     <div class="brand">
         <img src="/Public/Home/images/logo_word.png" alt="" />

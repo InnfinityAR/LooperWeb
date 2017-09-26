@@ -87,14 +87,18 @@
     display: none;
     width: 35%;
 }
-.actList li,.reActList li{
+.actHistoryList{
+    margin-top: 40px;
+}
+.actList li,.reActList li,.actHistoryList li{
     float: left;
     width: 16%;
     margin-right: 5%;
     margin-bottom: 35px;
 }
 .actList li:nth-of-type(5n),
-.reActList li:nth-of-type(5n){
+.reActList li:nth-of-type(5n),
+.actHistoryList li:nth-of-type(5n){
     margin-right: 0;
 }
 .actHead{
