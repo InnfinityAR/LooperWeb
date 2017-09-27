@@ -2,6 +2,8 @@
  * Created by yinshiru on 2017/8/4.
  */
 $(function () {
+    //隐藏裁切头像1:2
+    $(".bigLabel ").css("display","none");
     //        头像hover事件
     $(".deHead").hover(function () {
         $(".deHead img").css('opacity', '0.5');

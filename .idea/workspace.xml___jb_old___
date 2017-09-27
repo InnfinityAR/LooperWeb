@@ -39,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hostList.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hostList.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/hostList.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="376">
@@ -48,16 +48,6 @@
                 <element signature="n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createVenue.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -673,12 +663,12 @@
       <workItem from="1506168094578" duration="9186000" />
       <workItem from="1506307399619" duration="24746000" />
       <workItem from="1506394078043" duration="20252000" />
-      <workItem from="1506480385676" duration="9387000" />
+      <workItem from="1506480385676" duration="8792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="846894000" />
+    <option name="totallyTimeSpent" value="846299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -1091,6 +1081,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/actList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3220">
@@ -1139,14 +1137,6 @@
             <element signature="n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>

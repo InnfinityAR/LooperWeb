@@ -2,6 +2,9 @@
  * Created by yinshiru on 2017/8/24.
  */
 $(function () {
+    //隐藏裁切头像1:2
+    $(".bigLabel ").css("display","none");
+
     //        头像hover事件
     $(".deHead").hover(function () {
         $(".deHead img").css('opacity', '0.5');
@@ -11,7 +14,7 @@ $(function () {
         $(".deHead span").css('display', 'none');
     });
 });
-var jw;
+var jw; //经纬度
 var address;
 $(function () {
     $("#detailedAddr").blur(function () {
@@ -56,6 +59,7 @@ $(function () {
 
         }
     }
+    //提交事件
     $(".submit").click(function () {
         var bootstrapValidator = $("#formInfo").data('bootstrapValidator');
         var flag  =  bootstrapValidator.validate().isValid();

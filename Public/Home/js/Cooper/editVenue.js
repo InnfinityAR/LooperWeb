@@ -2,6 +2,16 @@ var jw;
 var jw1;
 var address;
 $(function () {
+    //隐藏裁切头像1:2
+    $(".bigLabel ").css("display","none");
+    //        头像hover事件
+    $(".deHead").hover(function () {
+        $(".deHead img").css('opacity', '0.5');
+        $(".deHead span").css('display', 'block');
+    }, function () {
+        $(".deHead img").css('opacity', '1');
+        $(".deHead span").css('display', 'none');
+    });
     $("#detailedAddr").blur(function () {
         address = $("#province10").val()+$("#city10").val()+$("#district10").val()+$("#detailedAddr").val();
         geocoder(address);
@@ -49,20 +59,6 @@ $(function () {
     }
     // 获取地址栏id
     var url = window.location.href;
-    function getQueryString1(url, ref)
-    {
-        var str = url.substr(url.indexOf('?') + 1);
-        if (str.indexOf('&') != -1) {
-            var arr = str.split('&');
-            for (i in arr) {
-                if (arr[i].split('=')[0] == ref)
-                    return arr[i].split('=')[1];
-            }
-        }
-        else {
-            return url.substr(url.indexOf('=') + 1)
-        }
-    }
     //调用方法
     id =getQueryString1(url,"id");
     //获取主办方数据

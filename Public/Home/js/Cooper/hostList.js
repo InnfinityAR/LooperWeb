@@ -19,7 +19,7 @@ $(function () {
                html +=      '<span class="hostImg">';
                html +=          '<img src='+ v.avatar[0] +' alt="">';
                html +=      '</span>';
-               html +=      '<span class="edit" data-index="'+k+'">';
+               html +=      '<span class="edit" data-index="'+v.hostid+'">';
                html +=          '<img src="/Public/Home/images/editA.png"  alt="">';
                html +=      '</span>';
                html +=  '</div>';
@@ -45,8 +45,7 @@ $(function () {
            });
            hostList = res.data;
            $(".edit").click(function () {
-              var index = $(this).attr("data-index");
-               var id = hostList[index].hostid;
+               var id = $(this).attr("data-index");
                location.href = "/Home/Cooper/editHost/id="+id;
            });
        }
@@ -79,7 +78,7 @@ $(function () {
                             html +=      '<span class="hostImg">';
                             html +=          '<img src='+ v.avatar[0] +' alt="">';
                             html +=      '</span>';
-                            html +=      '<span class="edit" data-index="'+k+'">';
+                            html +=      '<span class="edit" data-index="'+v.hostid+'">';
                             html +=          '<img src="/Public/Home/images/editA.png"  alt="">';
                             html +=      '</span>';
                             html +=  '</div>';
@@ -105,8 +104,7 @@ $(function () {
                         });
                         hostList = res.data;
                         $(".edit").click(function () {
-                            var index = $(this).attr("data-index");
-                            var id = hostList[index].hostid;
+                            var id =  $(this).attr("data-index");
                             location.href = "/Home/Cooper/editHost/id="+id;
                         });
                     }else{

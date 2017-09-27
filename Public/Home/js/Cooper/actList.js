@@ -40,11 +40,11 @@ $(function(){
                             html += '<span class="overAct">已结束</span>';
                         }
                         html += '<div>';
-                        html += '<span class="edit" data-index="' + i + '">';
+                        html += '<span class="edit" data-index="' + genre[i].activityid + '">';
                         html += '<img src="/Public/Home/images/editA.png"  alt="">';
                         html += '<span>编辑</span>';
                         html += '</span>';
-                        html += '<span class="delAct" data-index="' + i + '">';
+                        html += '<span class="delAct" data-index="' + genre[i].activityid  + '">';
                         html += '<img src="/Public/Home/images/deleteA.png"  alt="">';
                         html += '<span>删除</span>';
                         html += '</span>';
@@ -76,13 +76,11 @@ $(function(){
                 });
                 hostList = res.data;
                 $(".edit").click(function () {
-                    var index = $(this).attr("data-index");
-                    var id = hostList[index].activityid;
+                    var id = $(this).attr("data-index");
                     location.href = "/Home/Cooper/editAct/id=" + id;
                 });
                 $(".delAct").click(function () {
-                    var index = $(this).attr("data-index");
-                    var id = hostList[index].activityid;
+                    var id = $(this).attr("data-index");
                     layer.confirm("确定删除该活动吗?", {btn: ["确定", "取消"]}, function () {
                         var data = {};
                         data['activityId'] = id;
@@ -137,11 +135,11 @@ $(function(){
                                 html += '<span class="overAct">已结束</span>';
                             }
                             html += '<div>';
-                            html += '<span class="edit" data-index="' + k + '">';
+                            html += '<span class="edit" data-index="' + v.activityid + '">';
                             html += '<img src="/Public/Home/images/editA.png"  alt="">';
                             html += '<span>编辑</span>';
                             html += '</span>';
-                            html += '<span class="delAct" data-index="' + k + '">';
+                            html += '<span class="delAct" data-index="' + v.activityid + '">';
                             html += '<img src="/Public/Home/images/deleteA.png"  alt="">';
                             html += '<span>删除</span>';
                             html += '</span>';
@@ -170,13 +168,11 @@ $(function(){
                         });
                         hostList = res.data;
                         $(".edit").click(function () {
-                            var index = $(this).attr("data-index");
-                            var id = hostList[index].activityid;
+                            var id = $(this).attr("data-index");
                             location.href = "/Home/Cooper/editAct/id=" + id;
                         });
                         $(".delAct").click(function () {
-                            var index = $(this).attr("data-index");
-                            var id = hostList[index].activityid;
+                            var id = $(this).attr("data-index");
                             layer.confirm("确定删除该活动吗?", {btn: ["确定", "取消"]}, function () {
                                 var data = {};
                                 data['activityId'] = id;
