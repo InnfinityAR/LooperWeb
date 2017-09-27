@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3995a9db-971b-4c5d-b733-fe7100578430" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/function.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/editAct.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/editHost.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/editHost.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/editVenue.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/editVenue.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/createHost.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/createHost.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/createVenue.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/createVenue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/editAct.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/editHost.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/editHost.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/editVenue.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/editVenue.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_old___" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html" afterPath="$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/Cooper/hostList.js" afterPath="$PROJECT_DIR$/Public/Home/js/Cooper/hostList.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +22,8 @@
       <file leaf-file-name="hostList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/hostList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+            <state relative-caret-position="2858">
+              <caret line="157" column="29" lean-forward="false" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -42,7 +32,7 @@
       <file leaf-file-name="hostList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/hostList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
+            <state relative-caret-position="295">
               <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
@@ -52,11 +42,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createVenue.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createHost.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-799">
+              <caret line="89" column="1" lean-forward="false" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+              <folding>
+                <element signature="n#div#5;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#block#1;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createVenue.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+            <state relative-caret-position="-985">
+              <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webreload.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/js/webreload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoopApiController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/actList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-324">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
+              <folding>
+                <element signature="e#146#4357#0" expanded="false" />
+                <element signature="e#1464#1563#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Static/Cropper/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="188" column="23" lean-forward="false" selection-start-line="188" selection-start-column="12" selection-end-line="188" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -75,7 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cropper-canvas</find>
       <find>upLoadType</find>
       <find>inputImage</find>
       <find>$image</find>
@@ -105,6 +150,7 @@
       <find>edit</find>
       <find>delAct</find>
       <find>id</find>
+      <find>showMessage</find>
     </findStrings>
     <dirStrings>
       <dir>D:\phpStudy\WWW\LooperWeb-master\Application</dir>
@@ -147,7 +193,6 @@
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/index.css" />
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/hostBrand.js" />
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/hostBrand.css" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html" />
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/createAccount.css" />
         <option value="$PROJECT_DIR$/Public/Home/css/Cooper/accountList.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Cooper/actList.html" />
@@ -165,10 +210,11 @@
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/editVenue.js" />
         <option value="$PROJECT_DIR$/Application/Home/View/Cooper/editVenue.html" />
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/actList.js" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html" />
         <option value="$PROJECT_DIR$/Public/Home/js/Cooper/hostList.js" />
         <option value="$PROJECT_DIR$/Public/Home/js/webreload.js" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html" />
       </list>
     </option>
   </component>
@@ -259,11 +305,55 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
+              <option name="myItemId" value="Static" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looper" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Static" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cropper" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Looper" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Static" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cropper" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,10 +376,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cooper" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -678,10 +764,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="846894000" />
+    <option name="totallyTimeSpent" value="851090000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21669106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -737,13 +823,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Image/imageFoot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="67" column="66" lean-forward="false" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Static/Cropper/js/cropper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1293">
@@ -905,31 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="54" column="76" lean-forward="false" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#block#1;n#!!top" expanded="false" />
-            <element signature="e#6598#6605#0" expanded="false" />
-            <element signature="e#7293#7299#0" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#block#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/hostBrand.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="23" column="95" lean-forward="false" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="90" column="17" lean-forward="false" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-81">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="173" column="13" lean-forward="false" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6533">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,37 +1120,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/webreload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/前端/项目/H5lottery/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8289">
           <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/actList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3220">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
-          <folding>
-            <element signature="e#1464#1563#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1123,17 +1150,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/hostList.js">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+        <state relative-caret-position="-985">
+          <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/actList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#146#4357#0" expanded="false" />
+            <element signature="e#1464#1563#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Static/Cropper/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="188" column="23" lean-forward="false" selection-start-line="188" selection-start-column="12" selection-end-line="188" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/hostList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="295">
           <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
@@ -1142,10 +1188,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createVenue.html">
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/Cooper/hostList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        <state relative-caret-position="2858">
+          <caret line="157" column="29" lean-forward="false" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Cooper/createHost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="89" column="1" lean-forward="false" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+          <folding>
+            <element signature="n#div#5;n#form#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/webreload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoopApiController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>

@@ -103,7 +103,7 @@ $(function () {
                             })
                         });
                         hostList = res.data;
-                        $(".edit").click(function () {
+                        $(".hostList  .edit").click(function () {
                             var id =  $(this).attr("data-index");
                             location.href = "/Home/Cooper/editHost/id="+id;
                         });
@@ -155,7 +155,7 @@ $(function () {
                 })
             });
             hostBrandList = res.data;
-            $(".edit").click(function () {
+            $("hostBrandList .edit").click(function () {
                 var id =  $(this).attr("data-index");
                 location.href = "/Home/Cooper/hostBrand/id="+id;
             });
