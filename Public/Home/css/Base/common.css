@@ -61,7 +61,8 @@ nav .icon img{
 .information{
     width: 74px;
     position: absolute;
-    right: 90px
+    right: 90px;
+    z-index: 999;
 }
 button.text{
     font-size: 12px;

@@ -89,7 +89,6 @@ $(function () {
                 images =  images.split(';');
                 $(".passAlbum").html("");
                 var html ="";
-                console.log(images);
                 for(var i=0;i<images.length;i++){
                     if(images[i] != ""){
                         html += "<li><a ><img src="+ images[i] + "  /></a><div class='del'><img data-src="+ images[i] +" src='/Public/Home/images/delete.png'/></div></li>";
